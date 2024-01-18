@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C699AC9E2B59B7D400E62E8B /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699AC9D2B59B7D400E62E8B /* MonthView.swift */; };
+		C699ACA02B59B81600E62E8B /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699AC9F2B59B81600E62E8B /* DayView.swift */; };
+		C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */; };
+		C699ACA52B59B8EA00E62E8B /* AddMealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699ACA42B59B8EA00E62E8B /* AddMealButton.swift */; };
 		C6CA5E442B54D8DA006756EF /* FirstKlassFitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E432B54D8DA006756EF /* FirstKlassFitnessApp.swift */; };
 		C6CA5E462B54D8DA006756EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E452B54D8DA006756EF /* ContentView.swift */; };
 		C6CA5E482B54D8DB006756EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CA5E472B54D8DB006756EF /* Assets.xcassets */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C699AC9D2B59B7D400E62E8B /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		C699AC9F2B59B81600E62E8B /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInfomationView.swift; sourceTree = "<group>"; };
+		C699ACA42B59B8EA00E62E8B /* AddMealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealButton.swift; sourceTree = "<group>"; };
 		C6CA5E402B54D8DA006756EF /* FirstKlassFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstKlassFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CA5E432B54D8DA006756EF /* FirstKlassFitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstKlassFitnessApp.swift; sourceTree = "<group>"; };
 		C6CA5E452B54D8DA006756EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C699ACA32B59B8D000E62E8B /* CustomButtons */ = {
+			isa = PBXGroup;
+			children = (
+				C699ACA42B59B8EA00E62E8B /* AddMealButton.swift */,
+			);
+			path = CustomButtons;
+			sourceTree = "<group>";
+		};
 		C6CA5E372B54D8DA006756EF = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +122,7 @@
 		C6CA5E5C2B54E809006756EF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C699ACA32B59B8D000E62E8B /* CustomButtons */,
 				C6CA5E5E2B54E870006756EF /* CustomFonts */,
 				C6CA5E472B54D8DB006756EF /* Assets.xcassets */,
 				C6CA5E5A2B54E287006756EF /* Theme.xcassets */,
@@ -153,6 +170,9 @@
 		C6CA5E6A2B571BBC006756EF /* SupportiveViews */ = {
 			isa = PBXGroup;
 			children = (
+				C699AC9D2B59B7D400E62E8B /* MonthView.swift */,
+				C699AC9F2B59B81600E62E8B /* DayView.swift */,
+				C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */,
 			);
 			path = SupportiveViews;
 			sourceTree = "<group>";
@@ -230,12 +250,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6CA5E592B54E0E5006756EF /* TodayWorkoutPlanView.swift in Sources */,
+				C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */,
+				C699ACA52B59B8EA00E62E8B /* AddMealButton.swift in Sources */,
+				C699ACA02B59B81600E62E8B /* DayView.swift in Sources */,
 				C6CA5E6C2B571BE6006756EF /* StatisticView.swift in Sources */,
 				C6CA5E572B54E034006756EF /* HomeView.swift in Sources */,
 				C6CA5E652B56EB61006756EF /* WorkoutLGCardView.swift in Sources */,
 				C6CA5E462B54D8DA006756EF /* ContentView.swift in Sources */,
 				C6CA5E682B56F633006756EF /*  NewWorkoutView.swift in Sources */,
 				C6CA5E442B54D8DA006756EF /* FirstKlassFitnessApp.swift in Sources */,
+				C699AC9E2B59B7D400E62E8B /* MonthView.swift in Sources */,
 				C6CA5E632B56E3ED006756EF /* WorkoutCategoriesSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

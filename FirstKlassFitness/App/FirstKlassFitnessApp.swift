@@ -1,10 +1,3 @@
-//
-//  FirstKlassFitnessApp.swift
-//  FirstKlassFitness
-//
-//  Created by Alandis Seals on 1/14/24.
-//
-
 import SwiftUI
 
 @main

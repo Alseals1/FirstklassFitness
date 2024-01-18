@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  FirstKlassFitness
-//
-//  Created by Alandis Seals on 1/14/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -17,7 +10,7 @@ struct ContentView: View {
                     .tabItem{
                        Label("Home", systemImage: "house")
                     }
-                HomeView()
+                StatisticView()
                     .tabItem{
                         Label("Statistics", systemImage: "waveform.path.ecg")
                     }

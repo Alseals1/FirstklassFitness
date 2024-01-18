@@ -1,10 +1,3 @@
-//
-//  WorkoutCategoriesSectionView.swift
-//  FirstKlassFitness
-//
-//  Created by Alandis Seals on 1/16/24.
-//
-
 import SwiftUI
 
 struct WorkoutCategoriesSectionView: View {
