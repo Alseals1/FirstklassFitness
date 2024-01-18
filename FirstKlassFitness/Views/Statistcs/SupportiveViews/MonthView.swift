@@ -43,8 +43,6 @@ struct MonthView: View {
                     DayView(date: date)
                 }
             }
-            
-            
         }
     }
     
