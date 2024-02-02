@@ -15,7 +15,7 @@ struct WorkoutLGCardView: View {
                     .font(.custom("Roboto-Regular.ttf", size: 17))
                 
                 Text("07:00 - 08:00 AM")
-                    .foregroundStyle(.lightGray)
+                    .foregroundStyle(.lighterGray)
                     .font(.custom("Roboto-Regular.ttf", size: 13))
             }
             .padding([.leading, .bottom], 20)

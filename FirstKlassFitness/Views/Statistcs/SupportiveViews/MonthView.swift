@@ -38,7 +38,7 @@ struct MonthView: View {
             .padding(.horizontal, 24)
             .padding(.bottom, 29)
             
-            HStack() {
+            HStack {
                 ForEach(getDatesForCurrentWeek(), id: \.self) { date in
                     DayView(date: date)
                 }

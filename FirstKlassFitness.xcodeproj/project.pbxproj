@@ -23,6 +23,8 @@
 		C6CA5E652B56EB61006756EF /* WorkoutLGCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E642B56EB61006756EF /* WorkoutLGCardView.swift */; };
 		C6CA5E682B56F633006756EF /*  NewWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E672B56F633006756EF /*  NewWorkoutView.swift */; };
 		C6CA5E6C2B571BE6006756EF /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E6B2B571BE6006756EF /* StatisticView.swift */; };
+		C6E522CC2B6DA38B003938E4 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E522CB2B6DA38B003938E4 /* View+Extension.swift */; };
+		C6E522CE2B6DA3CC003938E4 /* MealLogStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E522CD2B6DA3CC003938E4 /* MealLogStationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		C6CA5E642B56EB61006756EF /* WorkoutLGCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutLGCardView.swift; sourceTree = "<group>"; };
 		C6CA5E672B56F633006756EF /*  NewWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NewWorkoutView.swift"; sourceTree = "<group>"; };
 		C6CA5E6B2B571BE6006756EF /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		C6E522CB2B6DA38B003938E4 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		C6E522CD2B6DA3CC003938E4 /* MealLogStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogStationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 		C6CA5E5C2B54E809006756EF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C6E522CA2B6DA36B003938E4 /* Extensions */,
 				C699ACA32B59B8D000E62E8B /* CustomButtons */,
 				C6CA5E5E2B54E870006756EF /* CustomFonts */,
 				C6CA5E472B54D8DB006756EF /* Assets.xcassets */,
@@ -163,6 +168,7 @@
 			children = (
 				C6CA5E6A2B571BBC006756EF /* SupportiveViews */,
 				C6CA5E6B2B571BE6006756EF /* StatisticView.swift */,
+				C6E522CD2B6DA3CC003938E4 /* MealLogStationView.swift */,
 			);
 			path = Statistcs;
 			sourceTree = "<group>";
@@ -175,6 +181,14 @@
 				C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */,
 			);
 			path = SupportiveViews;
+			sourceTree = "<group>";
+		};
+		C6E522CA2B6DA36B003938E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C6E522CB2B6DA38B003938E4 /* View+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,9 +270,11 @@
 				C6CA5E6C2B571BE6006756EF /* StatisticView.swift in Sources */,
 				C6CA5E572B54E034006756EF /* HomeView.swift in Sources */,
 				C6CA5E652B56EB61006756EF /* WorkoutLGCardView.swift in Sources */,
+				C6E522CE2B6DA3CC003938E4 /* MealLogStationView.swift in Sources */,
 				C6CA5E462B54D8DA006756EF /* ContentView.swift in Sources */,
 				C6CA5E682B56F633006756EF /*  NewWorkoutView.swift in Sources */,
 				C6CA5E442B54D8DA006756EF /* FirstKlassFitnessApp.swift in Sources */,
+				C6E522CC2B6DA38B003938E4 /* View+Extension.swift in Sources */,
 				C699AC9E2B59B7D400E62E8B /* MonthView.swift in Sources */,
 				C6CA5E632B56E3ED006756EF /* WorkoutCategoriesSectionView.swift in Sources */,
 			);

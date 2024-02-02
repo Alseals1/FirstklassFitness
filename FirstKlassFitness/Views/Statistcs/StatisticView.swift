@@ -3,6 +3,7 @@ import SwiftUI
 struct StatisticView: View {
     @State private var mealLogShown = false
     
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -23,11 +24,17 @@ struct StatisticView: View {
                             Spacer()
                             
                             AddMealButton(action: {
-                                #warning("Need Action")
+                                mealLogShown.toggle()
                             }, image: "plus", imageColor: .lavender)
                         }
                     }
+                    .sheet(isPresented: $mealLogShown, content: {
+                        MealLogStationView(mealLogShown: $mealLogShown)
+                            .presentationDetents([.fraction(0.50), .medium])
+                    })
+                    
                     Spacer()
+                    
                 }
             }
         }
