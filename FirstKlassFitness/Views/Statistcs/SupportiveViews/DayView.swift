@@ -11,9 +11,9 @@ struct DayView: View {
                     .lineLimit(1)
             }
             .foregroundColor(.white)
+            .frame(width: 40, height: 64)
             .background(Capsule()
-                .fill(Color.gray.opacity(0.5))
-                .frame(width: 30, height: 55))
+                .fill(Color.gray.opacity(0.5)))
         }
     }
     
