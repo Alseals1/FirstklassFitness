@@ -2,7 +2,7 @@ import SwiftUI
 
 struct DayView: View {
     @State var date: Date
-    
+  
     var body: some View {
         HStack {
             VStack {
@@ -13,7 +13,7 @@ struct DayView: View {
             .foregroundColor(.white)
             .frame(width: 40, height: 64)
             .background(Capsule()
-                .fill(Color.gray.opacity(0.5)))
+                .fill(getDay(from: date) == getDay(from: .now) ? Color.lavender : Color.gray.opacity(0.5)))
         }
     }
     
@@ -34,3 +34,5 @@ struct DayView: View {
 #Preview {
     DayView(date: .now)
 }
+
+

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C683B86E2B707C2000355482 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B86D2B707C2000355482 /* Meal.swift */; };
+		C683B8702B708A8800355482 /* MealLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B86F2B708A8800355482 /* MealLogItem.swift */; };
 		C699AC9E2B59B7D400E62E8B /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699AC9D2B59B7D400E62E8B /* MonthView.swift */; };
 		C699ACA02B59B81600E62E8B /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699AC9F2B59B81600E62E8B /* DayView.swift */; };
 		C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		C683B86D2B707C2000355482 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		C683B86F2B708A8800355482 /* MealLogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogItem.swift; sourceTree = "<group>"; };
 		C699AC9D2B59B7D400E62E8B /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		C699AC9F2B59B81600E62E8B /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInfomationView.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				C6CA5E6A2B571BBC006756EF /* SupportiveViews */,
 				C6CA5E6B2B571BE6006756EF /* StatisticView.swift */,
 				C6E522CD2B6DA3CC003938E4 /* MealLogStationView.swift */,
+				C683B86F2B708A8800355482 /* MealLogItem.swift */,
 			);
 			path = Statistcs;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				C6CA5E682B56F633006756EF /*  NewWorkoutView.swift in Sources */,
 				C683B86E2B707C2000355482 /* Meal.swift in Sources */,
 				C6CA5E442B54D8DA006756EF /* FirstKlassFitnessApp.swift in Sources */,
+				C683B8702B708A8800355482 /* MealLogItem.swift in Sources */,
 				C6E522CC2B6DA38B003938E4 /* View+Extension.swift in Sources */,
 				C699AC9E2B59B7D400E62E8B /* MonthView.swift in Sources */,
 				C6CA5E632B56E3ED006756EF /* WorkoutCategoriesSectionView.swift in Sources */,
