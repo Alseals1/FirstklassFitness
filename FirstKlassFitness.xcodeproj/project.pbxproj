@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C683B86E2B707C2000355482 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B86D2B707C2000355482 /* Meal.swift */; };
 		C683B8702B708A8800355482 /* MealLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B86F2B708A8800355482 /* MealLogItem.swift */; };
+		C683B88E2B70943500355482 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B88D2B70943500355482 /* WorkoutDetailView.swift */; };
 		C699AC9E2B59B7D400E62E8B /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699AC9D2B59B7D400E62E8B /* MonthView.swift */; };
 		C699ACA02B59B81600E62E8B /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699AC9F2B59B81600E62E8B /* DayView.swift */; };
 		C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		C683B86D2B707C2000355482 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		C683B86F2B708A8800355482 /* MealLogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogItem.swift; sourceTree = "<group>"; };
+		C683B88D2B70943500355482 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		C699AC9D2B59B7D400E62E8B /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		C699AC9F2B59B81600E62E8B /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInfomationView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				C6CA5E562B54E034006756EF /* HomeView.swift */,
+				C683B88D2B70943500355482 /* WorkoutDetailView.swift */,
 				C6CA5E662B56F548006756EF /* SupportiveViews */,
 			);
 			path = Home;
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6CA5E592B54E0E5006756EF /* TodayWorkoutPlanView.swift in Sources */,
+				C683B88E2B70943500355482 /* WorkoutDetailView.swift in Sources */,
 				C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */,
 				C699ACA52B59B8EA00E62E8B /* AddMealButton.swift in Sources */,
 				C699ACA02B59B81600E62E8B /* DayView.swift in Sources */,
