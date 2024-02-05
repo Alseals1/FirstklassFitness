@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C683B86E2B707C2000355482 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B86D2B707C2000355482 /* Meal.swift */; };
 		C699AC9E2B59B7D400E62E8B /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699AC9D2B59B7D400E62E8B /* MonthView.swift */; };
 		C699ACA02B59B81600E62E8B /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699AC9F2B59B81600E62E8B /* DayView.swift */; };
 		C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C683B86D2B707C2000355482 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		C699AC9D2B59B7D400E62E8B /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		C699AC9F2B59B81600E62E8B /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInfomationView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C683B86C2B707C0800355482 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C683B86D2B707C2000355482 /* Meal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C699ACA32B59B8D000E62E8B /* CustomButtons */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		C6CA5E422B54D8DA006756EF /* FirstKlassFitness */ = {
 			isa = PBXGroup;
 			children = (
+				C683B86C2B707C0800355482 /* Models */,
 				C6CA5E612B54E8EB006756EF /* Info.plist */,
 				C6CA5E5D2B54E830006756EF /* App */,
 				C6CA5E5C2B54E809006756EF /* Utils */,
@@ -273,6 +284,7 @@
 				C6E522CE2B6DA3CC003938E4 /* MealLogStationView.swift in Sources */,
 				C6CA5E462B54D8DA006756EF /* ContentView.swift in Sources */,
 				C6CA5E682B56F633006756EF /*  NewWorkoutView.swift in Sources */,
+				C683B86E2B707C2000355482 /* Meal.swift in Sources */,
 				C6CA5E442B54D8DA006756EF /* FirstKlassFitnessApp.swift in Sources */,
 				C6E522CC2B6DA38B003938E4 /* View+Extension.swift in Sources */,
 				C699AC9E2B59B7D400E62E8B /* MonthView.swift in Sources */,

@@ -3,6 +3,7 @@ import SwiftUI
 struct MealLogStationView: View {
     @State private var mealTextField: String = ""
     @State private var caloriesTextField: String = ""
+    @State private var logDate: Date = .now
     @Binding var mealLogShown: Bool
     
     var body: some View {
@@ -18,8 +19,10 @@ struct MealLogStationView: View {
                 
                 if !mealTextField.isEmpty {
                     Button(action: {
-                        //MARK: Save Meal and Calories
+                        demo.append(Meal(calories: Int(caloriesTextField) ?? 0, meal: mealTextField, date: .now))
                         mealLogShown = false
+                        
+                        print(demo)
                     }, label: {
                         Text("Add Meal")
                             .padding([.horizontal, .vertical], 8)

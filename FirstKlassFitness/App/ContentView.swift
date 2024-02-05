@@ -14,11 +14,11 @@ struct ContentView: View {
                     .tabItem{
                         Label("Statistics", systemImage: "waveform.path.ecg")
                     }
-                HomeView()
+               Text("Notes Views")
                     .tabItem{
                       Label("Notes", systemImage: "list.clipboard")
                     }
-                HomeView()
+                Text("Setting View")
                     .tabItem{
                         Label("Setting", systemImage: "gear")
                     }
