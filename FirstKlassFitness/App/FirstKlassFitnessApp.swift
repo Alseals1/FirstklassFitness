@@ -6,8 +6,6 @@ struct FirstKlassFitnessApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                
         }
-       
     }
 }

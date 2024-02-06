@@ -7,6 +7,7 @@ struct NewWorkoutView: View {
                 Text("New Workouts")
                     .foregroundStyle(.white)
                     .font(.system(size: 16))
+                    .bold()
                 
                 Spacer()
             }
