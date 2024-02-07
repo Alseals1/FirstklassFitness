@@ -1,4 +1,5 @@
 import Foundation
+
 struct Meal: Identifiable {
     var id = UUID()
     var calories: Int

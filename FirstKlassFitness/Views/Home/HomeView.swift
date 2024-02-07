@@ -2,22 +2,24 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                HStack {
-                    Text("Hello Alandis,")
-                        .font(.system(size: 36))
-                        .foregroundStyle(Color.white)
-                        
-                    Spacer()
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 20) {
+                    HStack {
+                        Text("Hello Alandis,")
+                            .font(.system(size: 36))
+                            .foregroundStyle(Color.white)
+                            
+                        Spacer()
+                    }
+                    TodayWorkoutPlanView()
+                    WorkoutCategoriesSectionView()
+                    NewWorkoutView()
                 }
-                TodayWorkoutPlanView()
-                WorkoutCategoriesSectionView()
-                NewWorkoutView()
+                .padding(.horizontal, 5)
             }
-            .padding(.horizontal, 5)
+            .scrollIndicators(.never)
         }
-        .scrollIndicators(.never)
     }
 }
 

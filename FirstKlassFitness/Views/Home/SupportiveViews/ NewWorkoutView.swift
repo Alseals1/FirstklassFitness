@@ -15,7 +15,11 @@ struct NewWorkoutView: View {
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(1..<10) { card in
-                            WorkoutLGCardView()
+                        NavigationLink(
+                            destination: WorkoutDetailView(),
+                            label: {
+                                WorkoutLGCardView()
+                            })
                     }
                 }
             }

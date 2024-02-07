@@ -29,7 +29,11 @@ struct WorkoutCategoriesSectionView: View {
             ScrollView(.horizontal) {
                 LazyHStack {
                     ForEach(1..<10) { card in
-                            WorkoutLGCardView()
+                        NavigationLink(
+                            destination: WorkoutDetailView(),
+                            label: {
+                                WorkoutLGCardView()
+                            })
                     }
                 }
                 .scrollTargetLayout()

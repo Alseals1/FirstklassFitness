@@ -17,7 +17,11 @@ struct TodayWorkoutPlanView: View {
                 
             }
             
-            WorkoutLGCardView()
+            NavigationLink(
+                destination: WorkoutDetailView(),
+                label: {
+                    WorkoutLGCardView()
+                })
         }
         .padding(.top, 20)
     }
