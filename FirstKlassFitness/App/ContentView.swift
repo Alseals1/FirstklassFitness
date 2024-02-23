@@ -14,7 +14,7 @@ struct ContentView: View {
                     .tabItem{
                         Label("Statistics", systemImage: "waveform.path.ecg")
                     }
-               Text("Notes Views")
+               NotesView()
                     .tabItem{
                       Label("Notes", systemImage: "list.clipboard")
                     }
