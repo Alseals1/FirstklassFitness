@@ -1,28 +1,38 @@
 import SwiftUI
 
 struct WorkoutLGCardView: View {
+    var exercise: Exercise
+    
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            Image("image1")
+            Image("workoutImage")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-           
-            
-            VStack {
-                Text("Day 1 - Warm Up")
+
+            VStack(alignment: .trailing) {
+                Text("Pushups")
                     .foregroundStyle(.white)
-                    .font(.custom("Roboto-Regular.ttf", size: 17))
+                    .font(.system(size: 25, weight: .bold))
                 
-                Text("07:00 - 08:00 AM")
-                    .foregroundStyle(.lighterGray)
-                    .font(.custom("Roboto-Regular.ttf", size: 13))
+                HStack(spacing: 1) {
+                    Text("30")
+                        .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    
+                    Text("sec")
+                        .foregroundStyle(.white)
+                }
             }
             .padding([.leading, .bottom], 20)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(.ultraThinMaterial.opacity(0.9))
+            
+           
         }
+        .clipShape(RoundedRectangle(cornerRadius: 25))
     }
 }
 
 #Preview {
-    WorkoutLGCardView()
+    WorkoutLGCardView(exercise: mockExercise)
 }

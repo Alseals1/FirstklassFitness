@@ -1,9 +1,5 @@
 import SwiftUI
-enum Difficulty: String {
-    case beginner = "Beginner"
-    case intermediate = "Intermediate"
-    case advanced = "Advanced"
-}
+
 struct WorkoutCategoriesSectionView: View {
    var tabs: [Difficulty] = [.beginner, .intermediate, .advanced]
     @State private var currentTab: Difficulty = .beginner
@@ -26,13 +22,13 @@ struct WorkoutCategoriesSectionView: View {
             
            category
             
-            ScrollView(.horizontal) {
-                LazyHStack {
-                    ForEach(1..<10) { card in
+            ScrollView {
+                LazyVStack(spacing: 30) {
+                    ForEach(mockExercises) { card in
                         NavigationLink(
                             destination: WorkoutDetailView(),
                             label: {
-                                WorkoutLGCardView()
+                                WorkoutLGCardView(exercise: card)
                             })
                     }
                 }

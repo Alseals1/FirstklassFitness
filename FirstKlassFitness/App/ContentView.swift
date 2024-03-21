@@ -9,6 +9,8 @@ struct ContentView: View {
                 HomeView()
                     .tabItem{
                        Label("Home", systemImage: "house")
+                            .foregroundStyle(Color.lavender, Color.lavender)
+                            
                     }
                 StatisticView()
                     .tabItem{

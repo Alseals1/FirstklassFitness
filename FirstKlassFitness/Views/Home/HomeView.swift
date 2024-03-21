@@ -14,7 +14,7 @@ struct HomeView: View {
                     }
                     TodayWorkoutPlanView()
                     WorkoutCategoriesSectionView()
-                    NewWorkoutView()
+                    
                 }
                 .padding(.horizontal, 5)
             }

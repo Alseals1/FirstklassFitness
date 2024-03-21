@@ -27,7 +27,6 @@
 		C6CA5E602B54E885006756EF /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6CA5E5F2B54E885006756EF /* Roboto-Regular.ttf */; };
 		C6CA5E632B56E3ED006756EF /* WorkoutCategoriesSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E622B56E3ED006756EF /* WorkoutCategoriesSectionView.swift */; };
 		C6CA5E652B56EB61006756EF /* WorkoutLGCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E642B56EB61006756EF /* WorkoutLGCardView.swift */; };
-		C6CA5E682B56F633006756EF /*  NewWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E672B56F633006756EF /*  NewWorkoutView.swift */; };
 		C6CA5E6C2B571BE6006756EF /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E6B2B571BE6006756EF /* StatisticView.swift */; };
 		C6E522CC2B6DA38B003938E4 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E522CB2B6DA38B003938E4 /* View+Extension.swift */; };
 		C6E522CE2B6DA3CC003938E4 /* MealLogStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E522CD2B6DA3CC003938E4 /* MealLogStationView.swift */; };
@@ -56,7 +55,6 @@
 		C6CA5E612B54E8EB006756EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C6CA5E622B56E3ED006756EF /* WorkoutCategoriesSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCategoriesSectionView.swift; sourceTree = "<group>"; };
 		C6CA5E642B56EB61006756EF /* WorkoutLGCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutLGCardView.swift; sourceTree = "<group>"; };
-		C6CA5E672B56F633006756EF /*  NewWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NewWorkoutView.swift"; sourceTree = "<group>"; };
 		C6CA5E6B2B571BE6006756EF /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		C6E522CB2B6DA38B003938E4 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		C6E522CD2B6DA3CC003938E4 /* MealLogStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogStationView.swift; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 				C6CA5E642B56EB61006756EF /* WorkoutLGCardView.swift */,
 				C6CA5E622B56E3ED006756EF /* WorkoutCategoriesSectionView.swift */,
 				C6CA5E582B54E0E5006756EF /* TodayWorkoutPlanView.swift */,
-				C6CA5E672B56F633006756EF /*  NewWorkoutView.swift */,
 			);
 			path = SupportiveViews;
 			sourceTree = "<group>";
@@ -308,7 +305,6 @@
 				C6E522CE2B6DA3CC003938E4 /* MealLogStationView.swift in Sources */,
 				C611E0822B73DC2F0043E335 /* WorkoutManager.swift in Sources */,
 				C6CA5E462B54D8DA006756EF /* ContentView.swift in Sources */,
-				C6CA5E682B56F633006756EF /*  NewWorkoutView.swift in Sources */,
 				C683B86E2B707C2000355482 /* Meal.swift in Sources */,
 				C6CA5E442B54D8DA006756EF /* FirstKlassFitnessApp.swift in Sources */,
 				C6563BE62B88F8CB005F5805 /* NotesView.swift in Sources */,

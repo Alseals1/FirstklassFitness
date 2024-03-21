@@ -1,19 +1,28 @@
 import SwiftUI
 
 struct WorkoutDetailView: View {
+    
     var body: some View {
         ScrollView {
             ZStack(alignment: Alignment(horizontal: .leading, vertical: .bottom)) {
-                Image("image")
-                    .resizable()
-                    .frame(width: .infinity ,height: 400)
-                    .aspectRatio(contentMode: .fit)
+                ZStack {
+                    Image("workoutImage")
+                        .resizable()
+                        .frame(maxWidth: .infinity, maxHeight: 500 )
+                    
+                    Image("story-item-overlay")
+                        .resizable()
+                        .frame(maxWidth: .infinity)
+                }
+                
                 
                 Text("30 Minute Core Thrust")
+                    .foregroundStyle(.white)
                     .font(.system(size: 33, weight: .bold))
                     .lineLimit(.max)
                     .padding([.bottom, .leading], 20)
             }
+            .clipShape(RoundedRectangle(cornerRadius: 25))
             
             VStack(spacing: 10) {
                 HStack {
@@ -44,7 +53,7 @@ struct WorkoutDetailView: View {
             .padding(.horizontal, 10)
             
         }
-        .ignoresSafeArea()
+        .ignoresSafeArea(.container, edges: .top)
     }
 }
 
