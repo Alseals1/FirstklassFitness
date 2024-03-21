@@ -5,18 +5,35 @@ struct DayView: View {
   
     var body: some View {
         HStack {
-            VStack {
-                Text(getWeekDay(from: date))
-                Text(getDay(from: date))
-                    .lineLimit(1)
+            if getDay(from: date) <= getDay(from: .now) {
+                NavigationLink {
+                    Text("Hello Date")
+                } label: {
+                    VStack {
+                        Text(getWeekDay(from: date))
+                        Text(getDay(from: date))
+                            .lineLimit(1)
+                    }
+                    .foregroundColor(.white)
+                    .frame(width: 40, height: 64)
+                    .background(Capsule()
+                        .fill(getDay(from: date) == getDay(from: .now) ? Color.lavender : Color.gray.opacity(0.5)))
+                }
+
+            } else {
+                VStack {
+                    Text(getWeekDay(from: date))
+                    Text(getDay(from: date))
+                        .lineLimit(1)
+                }
+                .foregroundColor(.white)
+                .frame(width: 40, height: 64)
+                .background(Capsule()
+                    .fill(getDay(from: date) == getDay(from: .now) ? Color.lavender : Color.gray.opacity(0.5)))
             }
-            .foregroundColor(.white)
-            .frame(width: 40, height: 64)
-            .background(Capsule()
-                .fill(getDay(from: date) == getDay(from: .now) ? Color.lavender : Color.gray.opacity(0.5)))
         }
     }
-    
+
     private func getWeekDay(from date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE"

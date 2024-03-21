@@ -40,7 +40,9 @@ struct MonthView: View {
             
             HStack {
                 ForEach(getDatesForCurrentWeek(), id: \.self) { date in
-                    DayView(date: date)
+                    
+                        DayView(date: date)
+                    
                 }
             }
         }
