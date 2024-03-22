@@ -3,7 +3,7 @@ import SwiftUI
 struct TodayWorkoutPlanView: View {
     @State private var exercises: [Exercise] = []
     #warning("Add Images to Data")
-    #warning("Add SwiftData for Meals and Notes")
+    #warning("Add SwiftData")
     
     var body: some View {
         VStack {
@@ -28,7 +28,12 @@ struct TodayWorkoutPlanView: View {
                         NavigationLink(
                             destination: WorkoutDetailView(exercise: exercise),
                             label: {
-                                selectedWorkoutView
+                                ZStack(alignment: .bottomLeading) {
+                                    Image(exercise.workoutImage)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                }
+                                .clipShape(Circle())
                             })
                         .containerRelativeFrame(.horizontal, count: 3, spacing: 10)
                         .scrollTransition { content, phase in
@@ -50,15 +55,6 @@ struct TodayWorkoutPlanView: View {
             }
         }
     }
-}
-
-var selectedWorkoutView: some View {
-    ZStack(alignment: .bottomLeading) {
-        Image("image3")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-    }
-    .clipShape(Circle())
 }
 
 #Preview {

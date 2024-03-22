@@ -15,7 +15,7 @@
     "workoutDetailImage": "burpees_detail",
     "duration": 45,
     "levelofExercise": "Intermediate",
-    "workoutImage": "burpees_home"
+    "workoutImage": "image2"
   },
   {
     "id": "12c81ef0-8f81-4a1e-b7f2-f8359274cb67",
@@ -24,7 +24,7 @@
     "workoutDetailImage": "mountain_climbers_detail",
     "duration": 40,
     "levelofExercise": "Intermediate",
-    "workoutImage": "mountain_climbers_home"
+    "workoutImage": "image4"
   },
   {
     "id": "634e6ec2-87bf-490f-b07d-d72ef234081b",
@@ -33,7 +33,7 @@
     "workoutDetailImage": "high_knees_detail",
     "duration": 30,
     "levelofExercise": "Beginner",
-    "workoutImage": "high_knees_home"
+    "workoutImage": "image5"
   },
   {
     "id": "d3f7995d-068f-4f35-b027-26e5d3b4a99c",
@@ -42,7 +42,7 @@
     "workoutDetailImage": "jumping_lunges_detail",
     "duration": 40,
     "levelofExercise": "Advanced",
-    "workoutImage": "jumping_lunges_home"
+    "workoutImage": "image6"
   },
   {
     "id": "f69a13a3-c978-4f59-81b5-3a3760495d6d",
