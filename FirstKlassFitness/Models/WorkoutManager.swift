@@ -1,16 +1,21 @@
 import Foundation
 
 // Define a class to manage user's workout data and history
-class WorkoutManager: ObservableObject {
-    @Published var workoutSessions: [WorkoutHistoryItem] = [] // Array to store workout history items
-    
-    // Function to add a workout history item to the workoutSessions array
-    func addWorkoutSession(_ session: WorkoutHistoryItem) {
-        workoutSessions.append(session)
-    }
-    
-    // Function to remove a workout history item from the workoutSessions array
-    func removeWorkoutSession(at index: Int) {
-        workoutSessions.remove(at: index)
+import Foundation
+
+class ExerciseManager {
+    static func loadExercises(completion: @escaping ([Exercise]) -> Void) {
+        if let url = Bundle.main.url(forResource: "exercises", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let exercises = try JSONDecoder().decode([Exercise].self, from: data)
+                dump(exercises)
+                completion(exercises)
+            } catch {
+                print("Error loading JSON data: \(error)")
+                completion([])
+            }
+        }
     }
 }
+

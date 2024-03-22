@@ -1,6 +1,10 @@
 import SwiftUI
 
 struct TodayWorkoutPlanView: View {
+    @State private var exercises: [Exercise] = []
+    #warning("Add Images to Data")
+    #warning("Add SwiftData for Meals and Notes")
+    
     var body: some View {
         VStack {
             HStack {
@@ -11,7 +15,7 @@ struct TodayWorkoutPlanView: View {
                 
                 Spacer()
                 
-                Text("Mon 26 January")
+                Text(Date().formattedDate())
                     .foregroundStyle(.lavender)
                     .font(.system(size: 16))
                 
@@ -19,10 +23,10 @@ struct TodayWorkoutPlanView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(1..<10, id: \.self) { _ in
+                    ForEach(exercises ) { exercise in
                      
                         NavigationLink(
-                            destination: WorkoutDetailView(),
+                            destination: WorkoutDetailView(exercise: exercise),
                             label: {
                                 selectedWorkoutView
                             })
@@ -31,7 +35,6 @@ struct TodayWorkoutPlanView: View {
                             content
                                 .opacity(phase.isIdentity ? 1.0 : 0.2)
                                 .scaleEffect(phase.isIdentity ? 1.0 : 0.2)
-                                
                         }
                     }
                 }
@@ -41,6 +44,11 @@ struct TodayWorkoutPlanView: View {
             .scrollTargetBehavior(.viewAligned)
         }
         .padding(.top, 20)
+        .onAppear {
+            ExerciseManager.loadExercises { loadedExercise in
+                self.exercises = loadedExercise
+            }
+        }
     }
 }
 
@@ -49,7 +57,6 @@ var selectedWorkoutView: some View {
         Image("image3")
             .resizable()
             .aspectRatio(contentMode: .fit)
-
     }
     .clipShape(Circle())
 }

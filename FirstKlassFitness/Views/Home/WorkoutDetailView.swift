@@ -1,12 +1,13 @@
 import SwiftUI
 
 struct WorkoutDetailView: View {
+    var exercise: Exercise
     
     var body: some View {
         ScrollView {
             ZStack(alignment: Alignment(horizontal: .leading, vertical: .bottom)) {
                 ZStack {
-                    Image("workoutImage")
+                    Image(exercise.workoutImage)
                         .resizable()
                         .frame(maxWidth: .infinity, maxHeight: 500 )
                     
@@ -15,8 +16,7 @@ struct WorkoutDetailView: View {
                         .frame(maxWidth: .infinity)
                 }
                 
-                
-                Text("30 Minute Core Thrust")
+                Text(exercise.name)
                     .foregroundStyle(.white)
                     .font(.system(size: 33, weight: .bold))
                     .lineLimit(.max)
@@ -26,37 +26,42 @@ struct WorkoutDetailView: View {
             
             VStack(spacing: 10) {
                 HStack {
-                    Text("3 sets")
+                    Text("TIME:")
                         .padding(5)
                         .background(RoundedRectangle(cornerRadius: 8).fill(.lavender))
                     
-                    
-                    Text("45s")
+                    Text("\(exercise.duration)sec")
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 
-                Text("Est accusantium amet nam ipsam blanditiis ut voluptatibus dolorem. Eos obcaecati natus id perferendis quibusdam et explicabo omnis ab asperiores reprehenderit non libero dolore qui ullam dolorum et praesentium quia. Aut voluptatibus dignissimos et error sapiente hic ratione molestiae. Quo internos illo non quae sint nam nihil velit ex provident necessitatibus hic minima aliquam aut quas consectetur et quibusdam ratione.")
+                Text(exercise.description)
                     .font(.system(size: 18, weight: .medium))
                     .multilineTextAlignment(.leading)
                 
-                Button(action: {
-                    
-                }, label: {
-                    Image(systemName: "square.and.pencil")
-                        .font(.system(size: 30, weight: .medium))
-                        .foregroundStyle(.lighterGray)
-                })
+                NavigationLink {
+                    NotesView()
+                } label: {
+                    VStack {
+                        Text("Notes")
+                            .font(.system(size: 20))
+                            .bold()
+                        
+                        Image(systemName: "square.and.pencil")
+                            .font(.system(size: 30, weight: .medium))
+                            .foregroundStyle(.lighterGray)
+                    }
+                    .foregroundStyle(.white)
+                }
                 .frame(maxWidth: .infinity ,alignment: .trailing)
-                
-                
             }
             .padding(.horizontal, 10)
-            
         }
         .ignoresSafeArea(.container, edges: .top)
     }
 }
 
 #Preview {
-    WorkoutDetailView()
+    NavigationStack {
+        WorkoutDetailView(exercise: mockExercise)
+    }
 }

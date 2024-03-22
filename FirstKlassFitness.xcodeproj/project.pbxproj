@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C611E0802B73DB7A0043E335 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611E07F2B73DB7A0043E335 /* Exercise.swift */; };
 		C611E0822B73DC2F0043E335 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611E0812B73DC2F0043E335 /* WorkoutManager.swift */; };
+		C62C5C3C2BAD3D39000A7A95 /* exercises.json in Resources */ = {isa = PBXBuildFile; fileRef = C62C5C3B2BAD3D39000A7A95 /* exercises.json */; };
+		C62C5C3E2BAD4BD8000A7A95 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C5C3D2BAD4BD8000A7A95 /* Date+Extension.swift */; };
 		C6563BE62B88F8CB005F5805 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6563BE52B88F8CB005F5805 /* NotesView.swift */; };
 		C683B86E2B707C2000355482 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B86D2B707C2000355482 /* Meal.swift */; };
 		C683B8702B708A8800355482 /* MealLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B86F2B708A8800355482 /* MealLogItem.swift */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		C611E07F2B73DB7A0043E335 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		C611E0812B73DC2F0043E335 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		C62C5C3B2BAD3D39000A7A95 /* exercises.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exercises.json; sourceTree = "<group>"; };
+		C62C5C3D2BAD4BD8000A7A95 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		C6563BE52B88F8CB005F5805 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		C683B86D2B707C2000355482 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		C683B86F2B708A8800355482 /* MealLogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogItem.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		C6CA5E422B54D8DA006756EF /* FirstKlassFitness */ = {
 			isa = PBXGroup;
 			children = (
+				C62C5C3B2BAD3D39000A7A95 /* exercises.json */,
 				C683B86C2B707C0800355482 /* Models */,
 				C6CA5E612B54E8EB006756EF /* Info.plist */,
 				C6CA5E5D2B54E830006756EF /* App */,
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				C6E522CB2B6DA38B003938E4 /* View+Extension.swift */,
+				C62C5C3D2BAD4BD8000A7A95 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C62C5C3C2BAD3D39000A7A95 /* exercises.json in Resources */,
 				C6CA5E5B2B54E287006756EF /* Theme.xcassets in Resources */,
 				C6CA5E4B2B54D8DB006756EF /* Preview Assets.xcassets in Resources */,
 				C6CA5E602B54E885006756EF /* Roboto-Regular.ttf in Resources */,
@@ -299,6 +306,7 @@
 				C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */,
 				C699ACA52B59B8EA00E62E8B /* AddMealButton.swift in Sources */,
 				C699ACA02B59B81600E62E8B /* DayView.swift in Sources */,
+				C62C5C3E2BAD4BD8000A7A95 /* Date+Extension.swift in Sources */,
 				C6CA5E6C2B571BE6006756EF /* StatisticView.swift in Sources */,
 				C6CA5E572B54E034006756EF /* HomeView.swift in Sources */,
 				C6CA5E652B56EB61006756EF /* WorkoutLGCardView.swift in Sources */,

@@ -5,17 +5,17 @@ struct WorkoutLGCardView: View {
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            Image("workoutImage")
+            Image(exercise.workoutImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
 
             VStack(alignment: .trailing) {
-                Text("Pushups")
+                Text(exercise.name)
                     .foregroundStyle(.white)
                     .font(.system(size: 25, weight: .bold))
                 
                 HStack(spacing: 1) {
-                    Text("30")
+                    Text("\(exercise.duration)")
                         .foregroundStyle(.white)
                     .fontWeight(.bold)
                     
@@ -26,8 +26,6 @@ struct WorkoutLGCardView: View {
             .padding([.leading, .bottom], 20)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(.ultraThinMaterial.opacity(0.9))
-            
-           
         }
         .clipShape(RoundedRectangle(cornerRadius: 25))
     }

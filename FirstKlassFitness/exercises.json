@@ -1,0 +1,110 @@
+[
+  {
+    "id": "a16a3b25-67b8-4d1f-a8c0-5fa80c9d6933",
+    "name": "Jump Squats",
+    "description": "Start with feet shoulder-width apart, lower into a squat position, then explode upward into a jump. Land softly and immediately lower back into a squat to repeat.",
+    "workoutDetailImage": "workoutImage",
+    "duration": 30,
+    "levelofExercise": "Intermediate",
+    "workoutImage": "image3"
+  },
+  {
+    "id": "0dded166-d290-4d40-9d19-cfc5d4a34d5e",
+    "name": "Burpees",
+    "description": "Begin standing, drop into a squat position, kick feet back into a plank position, perform a push-up, return feet to the squat position, and then jump up explosively.",
+    "workoutDetailImage": "burpees_detail",
+    "duration": 45,
+    "levelofExercise": "Intermediate",
+    "workoutImage": "burpees_home"
+  },
+  {
+    "id": "12c81ef0-8f81-4a1e-b7f2-f8359274cb67",
+    "name": "Mountain Climbers",
+    "description": "Start in a plank position, alternate bringing knees towards the chest as if climbing a mountain, keeping hips low and core engaged.",
+    "workoutDetailImage": "mountain_climbers_detail",
+    "duration": 40,
+    "levelofExercise": "Intermediate",
+    "workoutImage": "mountain_climbers_home"
+  },
+  {
+    "id": "634e6ec2-87bf-490f-b07d-d72ef234081b",
+    "name": "High Knees",
+    "description": "Stand with feet hip-width apart, run in place bringing knees up towards chest as high as possible while pumping arms.",
+    "workoutDetailImage": "high_knees_detail",
+    "duration": 30,
+    "levelofExercise": "Beginner",
+    "workoutImage": "high_knees_home"
+  },
+  {
+    "id": "d3f7995d-068f-4f35-b027-26e5d3b4a99c",
+    "name": "Jumping Lunges",
+    "description": "Start in a lunge position, jump explosively into the air, switch legs in mid-air, and land in a lunge position with the opposite leg forward.",
+    "workoutDetailImage": "jumping_lunges_detail",
+    "duration": 40,
+    "levelofExercise": "Advanced",
+    "workoutImage": "jumping_lunges_home"
+  },
+  {
+    "id": "f69a13a3-c978-4f59-81b5-3a3760495d6d",
+    "name": "Push-ups",
+    "description": "Start in a plank position with hands shoulder-width apart, lower your body until chest nearly touches the floor, then push back up to starting position.",
+    "workoutDetailImage": "pushups_detail",
+    "duration": 40,
+    "levelofExercise": "Intermediate",
+    "workoutImage": "pushups_home"
+  },
+  {
+    "id": "5156e4db-bb1d-4a7a-bde2-39a2c0cc98da",
+    "name": "Plank",
+    "description": "Start in a push-up position, but with your weight supported on your forearms instead of your hands. Hold this position, keeping your body in a straight line from head to heels.",
+    "workoutDetailImage": "plank_detail",
+    "duration": 60,
+    "levelofExercise": "Intermediate",
+    "workoutImage": "plank_home"
+  },
+  {
+    "id": "3ecf3052-c39f-49b7-82e7-eb05c25ff6d9",
+    "name": "Jump Rope",
+    "description": "Hold the handles of a jump rope in each hand, swing the rope over your head, and jump over it as it comes toward your feet. Keep a steady rhythm.",
+    "workoutDetailImage": "jump_rope_detail",
+    "duration": 60,
+    "levelofExercise": "Intermediate",
+    "workoutImage": "jump_rope_home"
+  },
+  {
+    "id": "c70cfb33-aa13-40ac-a9b1-cfa180400dbc",
+    "name": "Sit-ups",
+    "description": "Lie on your back with knees bent and feet flat on the floor. Cross your arms over your chest or place hands behind your head. Curl your upper body up towards your knees, then lower back down.",
+    "workoutDetailImage": "situps_detail",
+    "duration": 45,
+    "levelofExercise": "Beginner",
+    "workoutImage": "situps_home"
+  },
+  {
+    "id": "a34c70df-3fa5-4e2f-95cf-c30568c6c24a",
+    "name": "Squat Jumps",
+    "description": "Start with feet shoulder-width apart, lower into a squat position, then explode upward into a jump. Land softly and immediately lower back into a squat to repeat.",
+    "workoutDetailImage": "squat_jumps_detail",
+    "duration": 40,
+    "levelofExercise": "Intermediate",
+    "workoutImage": "squat_jumps_home"
+  },
+  {
+    "id": "32072f1a-9329-4b7f-9ba8-7ebfb80415d1",
+    "name": "Plank Jacks",
+    "description": "Start in a plank position, then jump both feet out wide like a jumping jack while keeping your upper body stable. Jump feet back together to return to plank position.",
+    "workoutDetailImage": "plank_jacks_detail",
+    "duration": 30,
+    "levelofExercise": "Intermediate",
+    "workoutImage": "plank_jacks_home"
+  },
+  {
+    "id": "157e98ff-44da-4e92-86a2-cd417e2a1296",
+    "name": "Box Jumps",
+    "description": "Stand in front of a sturdy box or platform, jump onto the box using both feet, then step or jump back down to the starting position.",
+    "workoutDetailImage": "box_jumps_detail",
+    "duration": 45,
+    "levelofExercise": "Advanced",
+    "workoutImage": "box_jumps_home"
+  }
+]

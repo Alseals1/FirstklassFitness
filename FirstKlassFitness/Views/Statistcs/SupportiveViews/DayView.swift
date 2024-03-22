@@ -2,7 +2,7 @@ import SwiftUI
 
 struct DayView: View {
     @State var date: Date
-  
+    
     var body: some View {
         HStack {
             if getDay(from: date) <= getDay(from: .now) {
@@ -19,7 +19,6 @@ struct DayView: View {
                     .background(Capsule()
                         .fill(getDay(from: date) == getDay(from: .now) ? Color.lavender : Color.gray.opacity(0.5)))
                 }
-
             } else {
                 VStack {
                     Text(getWeekDay(from: date))
@@ -33,7 +32,7 @@ struct DayView: View {
             }
         }
     }
-
+    
     private func getWeekDay(from date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE"

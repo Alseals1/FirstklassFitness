@@ -42,7 +42,6 @@ struct MonthView: View {
                 ForEach(getDatesForCurrentWeek(), id: \.self) { date in
                     
                         DayView(date: date)
-                    
                 }
             }
         }

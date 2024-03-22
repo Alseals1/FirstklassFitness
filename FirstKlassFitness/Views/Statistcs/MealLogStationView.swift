@@ -36,6 +36,7 @@ struct MealLogStationView: View {
             }
         }
     }
+    
     var mealEntryView: some View {
         VStack(spacing: 30) {
             VStack(alignment: .leading) {

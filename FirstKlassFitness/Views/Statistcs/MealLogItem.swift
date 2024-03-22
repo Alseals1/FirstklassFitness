@@ -38,7 +38,6 @@ struct MealLogItem: View {
         .frame(height: 76)
         .background(RoundedRectangle(cornerRadius: 12)
             .fill(Color.charcoalGray))
-        
     }
 }
 
