@@ -1,8 +1,13 @@
 import SwiftUI
+import SwiftData
 
 struct StatisticView: View {
+    @Environment(\.modelContext) var modelContext
+    @Query var meals: [Meal]
+    
+    
     @State private var mealLogShown = false
-    @State var meals: [Meal] = demo
+   // @State var mealDemo: [Meal] = demo
     
     var body: some View {
         NavigationStack {
@@ -26,14 +31,19 @@ struct StatisticView: View {
                             AddMealButton(action: {
                                 print(Date.now)
                                 mealLogShown.toggle()
+                                
+                                
                             }, image: "plus", imageColor: .lavender)
                         }
                         
-                        ScrollView {
-                            ForEach(meals) { item in
-                                MealLogItem(calories: item.calories, meal: item.meal)
+                            List {
+                                
+                                ForEach(meals) { item in
+                                    MealLogItem(calories: item.calories, meal: item.meal, date: item.date)
+                                }
+                                .onDelete(perform: deleteMeal)
                             }
-                        }
+                            .listStyle(.plain)
                     }
                     .sheet(isPresented: $mealLogShown, content: {
                         MealLogStationView(mealLogShown: $mealLogShown)
@@ -47,8 +57,17 @@ struct StatisticView: View {
     }
 }
 
+extension StatisticView {
+    func deleteMeal(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let meal  = meals[index]
+            modelContext.delete(meal)
+        }
+    }
+}
+
 #Preview {
-    StatisticView(meals: [Meal(calories: 300, meal: "Chicken", date: .now)])
+    StatisticView()
 }
 
 extension StatisticView {

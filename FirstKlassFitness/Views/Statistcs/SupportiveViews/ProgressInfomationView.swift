@@ -1,5 +1,6 @@
 import SwiftUI
 
+
 struct ProgressInformationView: View {
     var calories: Int
     var goalCalories: Int

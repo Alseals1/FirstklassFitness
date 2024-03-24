@@ -9,12 +9,12 @@ struct WorkoutLGCardView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
 
-            VStack(alignment: .trailing) {
+            VStack(alignment: .leading, spacing: 0) {
                 Text(exercise.name)
                     .foregroundStyle(.white)
                     .font(.system(size: 25, weight: .bold))
                 
-                HStack(spacing: 1) {
+                HStack(spacing: 0) {
                     Text("\(exercise.duration)")
                         .foregroundStyle(.white)
                     .fontWeight(.bold)

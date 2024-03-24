@@ -121,8 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				C62C5C3B2BAD3D39000A7A95 /* exercises.json */,
-				C683B86C2B707C0800355482 /* Models */,
 				C6CA5E612B54E8EB006756EF /* Info.plist */,
+				C683B86C2B707C0800355482 /* Models */,
 				C6CA5E5D2B54E830006756EF /* App */,
 				C6CA5E5C2B54E809006756EF /* Utils */,
 				C6CA5E512B54DFE3006756EF /* Views */,

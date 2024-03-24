@@ -2,7 +2,6 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
                     HStack {
@@ -19,7 +18,6 @@ struct HomeView: View {
                 .padding(.horizontal, 5)
             }
             .scrollIndicators(.never)
-        }
     }
 }
 

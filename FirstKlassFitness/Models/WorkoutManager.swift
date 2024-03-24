@@ -1,6 +1,5 @@
 import Foundation
 
-// Define a class to manage user's workout data and history
 import Foundation
 
 class ExerciseManager {
@@ -9,7 +8,6 @@ class ExerciseManager {
             do {
                 let data = try Data(contentsOf: url)
                 let exercises = try JSONDecoder().decode([Exercise].self, from: data)
-                dump(exercises)
                 completion(exercises)
             } catch {
                 print("Error loading JSON data: \(error)")

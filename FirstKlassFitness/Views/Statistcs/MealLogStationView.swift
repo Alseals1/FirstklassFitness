@@ -1,6 +1,8 @@
 import SwiftUI
+import SwiftData
 
 struct MealLogStationView: View {
+    @Environment(\.modelContext) var modelContext
     @State private var mealTextField: String = ""
     @State private var caloriesTextField: String = ""
     @State private var logDate: Date = .now
@@ -19,10 +21,9 @@ struct MealLogStationView: View {
                 
                 if !mealTextField.isEmpty {
                     Button(action: {
-                        demo.append(Meal(calories: Int(caloriesTextField) ?? 0, meal: mealTextField, date: .now))
                         mealLogShown = false
                         
-                        print(demo)
+                        addMeal()
                     }, label: {
                         Text("Add Meal")
                             .padding([.horizontal, .vertical], 8)
@@ -71,6 +72,17 @@ struct MealLogStationView: View {
             }
         }
         .padding(.horizontal, 20)
+    }
+}
+
+extension MealLogStationView {
+    func addMeal() {
+        let calories = self.caloriesTextField
+        let meal = self.mealTextField
+        let date = Date.now
+        let newMeal = Meal(calories: Int(calories) ?? 0, meal: meal, date: date)
+        
+        modelContext.insert(newMeal)
     }
 }
 

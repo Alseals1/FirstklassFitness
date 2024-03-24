@@ -10,6 +10,7 @@ import SwiftUI
 struct MealLogItem: View {
     var calories: Int
     var meal: String
+    var date: Date
     
     var body: some View {
         HStack {
@@ -19,7 +20,7 @@ struct MealLogItem: View {
                         .font(.system(size: 17, weight: .semibold))
                         .foregroundStyle(.lighterGray)
                     Spacer()
-                    Text("10:00")
+                    Text(date.formattedTime())
                         .font(.system(size: 13, weight: .semibold))
                         .foregroundStyle(.lavender)
                 }
@@ -41,6 +42,8 @@ struct MealLogItem: View {
     }
 }
 
+
+
 #Preview {
-    MealLogItem(calories: 300, meal: "Chicken")
+    MealLogItem(calories: 300, meal: "Chicken", date: .now)
 }
