@@ -9,6 +9,7 @@ struct FirstKlassFitnessApp: App {
             NavigationStack {
                 ContentView()
             }
+            .preferredColorScheme(.dark)
         }
         .modelContainer(for: Meal.self)
     }
