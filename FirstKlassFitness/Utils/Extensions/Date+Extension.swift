@@ -19,4 +19,18 @@ extension Date {
           formatter.dateFormat = "h:mma"
           return formatter.string(from: self)
       }
+    
+    func getWeekDay(from date: Date) -> String {
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "EEE"
+           dateFormatter.string(from: date)
+           
+           return date.formatted(Date.FormatStyle().weekday(.narrow))
+       }
+       
+       func getDay(from date: Date) -> String {
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "d"
+           return dateFormatter.string(from: date)
+       }
 }

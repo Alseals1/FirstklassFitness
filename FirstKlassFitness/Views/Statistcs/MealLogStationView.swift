@@ -7,6 +7,7 @@ struct MealLogStationView: View {
     @State private var caloriesTextField: String = ""
     @State private var logDate: Date = .now
     @Binding var mealLogShown: Bool
+    @Binding var selectedDate: Date
     
     var body: some View {
         ZStack {
@@ -79,7 +80,7 @@ extension MealLogStationView {
     func addMeal() {
         let calories = self.caloriesTextField
         let meal = self.mealTextField
-        let date = Date.now
+        let date = selectedDate
         let newMeal = Meal(calories: Int(calories) ?? 0, meal: meal, date: date)
         
         modelContext.insert(newMeal)
@@ -87,5 +88,5 @@ extension MealLogStationView {
 }
 
 #Preview {
-    MealLogStationView(mealLogShown: .constant(false))
+    MealLogStationView(mealLogShown: .constant(false), selectedDate: .constant(.now))
 }

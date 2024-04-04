@@ -2,6 +2,7 @@ import SwiftUI
 
 struct MonthView: View {
     @State private var currentDate = Date()
+    @Binding var selectedDate: Date
     
     var body: some View {
         VStack {
@@ -40,8 +41,13 @@ struct MonthView: View {
             
             HStack {
                 ForEach(getDatesForCurrentWeek(), id: \.self) { date in
-                    
+                    Button(action: {
+                        selectedDate = date
+                    }, label: {
                         DayView(date: date)
+                    })
+                    .background(Capsule()
+                        .fill(date.getDay(from: date) == date.getDay(from: selectedDate) ? Color.lavender : Color.gray.opacity(0.5)))
                 }
             }
         }
@@ -61,5 +67,5 @@ struct MonthView: View {
 }
 
 #Preview {
-    MonthView()
+    MonthView(selectedDate: .constant(.now))
 }

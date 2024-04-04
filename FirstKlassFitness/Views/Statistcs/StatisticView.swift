@@ -5,9 +5,8 @@ struct StatisticView: View {
     @Environment(\.modelContext) var modelContext
     @Query var meals: [Meal]
     
-    
+    @State private var selectedDate = Date()
     @State private var mealLogShown = false
-   // @State var mealDemo: [Meal] = demo
     
     var body: some View {
         NavigationStack {
@@ -15,7 +14,7 @@ struct StatisticView: View {
                 Color.black
                     .ignoresSafeArea()
                 VStack {
-                    MonthView()
+                    MonthView(selectedDate: $selectedDate)
                         .padding(.vertical)
                     
                     ProgressInformationView(calories: totalCalories, goalCalories: 3000)
@@ -38,7 +37,7 @@ struct StatisticView: View {
                         
                             List {
                                 
-                                ForEach(meals) { item in
+                                ForEach(mealByDate()) { item in
                                     MealLogItem(calories: item.calories, meal: item.meal, date: item.date)
                                 }
                                 .onDelete(perform: deleteMeal)
@@ -46,7 +45,7 @@ struct StatisticView: View {
                             .listStyle(.plain)
                     }
                     .sheet(isPresented: $mealLogShown, content: {
-                        MealLogStationView(mealLogShown: $mealLogShown)
+                        MealLogStationView(mealLogShown: $mealLogShown, selectedDate: $selectedDate)
                             .presentationDetents([.fraction(0.50), .medium])
                     })
                     
@@ -72,8 +71,15 @@ extension StatisticView {
 
 extension StatisticView {
     var totalCalories: Int {
-        meals.reduce(0) {
+        mealByDate().reduce(0) {
             $0 + $1.calories
         }
+    }
+    
+    func mealByDate() -> [Meal] {
+        var filteredMeals = meals.filter { Calendar.current.isDate($0.date, inSameDayAs: selectedDate)}
+        
+        return filteredMeals
+        
     }
 }
