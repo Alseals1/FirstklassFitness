@@ -19,6 +19,7 @@
 		C699ACA02B59B81600E62E8B /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699AC9F2B59B81600E62E8B /* DayView.swift */; };
 		C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */; };
 		C699ACA52B59B8EA00E62E8B /* AddMealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699ACA42B59B8EA00E62E8B /* AddMealButton.swift */; };
+		C6A5DE0D2BBF846400112464 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A5DE0C2BBF846400112464 /* VisualEffectView.swift */; };
 		C6CA5E442B54D8DA006756EF /* FirstKlassFitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E432B54D8DA006756EF /* FirstKlassFitnessApp.swift */; };
 		C6CA5E462B54D8DA006756EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E452B54D8DA006756EF /* ContentView.swift */; };
 		C6CA5E482B54D8DB006756EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CA5E472B54D8DB006756EF /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		C699AC9F2B59B81600E62E8B /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInfomationView.swift; sourceTree = "<group>"; };
 		C699ACA42B59B8EA00E62E8B /* AddMealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealButton.swift; sourceTree = "<group>"; };
+		C6A5DE0C2BBF846400112464 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		C6CA5E402B54D8DA006756EF /* FirstKlassFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstKlassFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CA5E432B54D8DA006756EF /* FirstKlassFitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstKlassFitnessApp.swift; sourceTree = "<group>"; };
 		C6CA5E452B54D8DA006756EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				C6CA5E5E2B54E870006756EF /* CustomFonts */,
 				C6CA5E472B54D8DB006756EF /* Assets.xcassets */,
 				C6CA5E5A2B54E287006756EF /* Theme.xcassets */,
+				C6A5DE0C2BBF846400112464 /* VisualEffectView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			files = (
 				C6CA5E592B54E0E5006756EF /* TodayWorkoutPlanView.swift in Sources */,
 				C683B88E2B70943500355482 /* WorkoutDetailView.swift in Sources */,
+				C6A5DE0D2BBF846400112464 /* VisualEffectView.swift in Sources */,
 				C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */,
 				C699ACA52B59B8EA00E62E8B /* AddMealButton.swift in Sources */,
 				C699ACA02B59B81600E62E8B /* DayView.swift in Sources */,

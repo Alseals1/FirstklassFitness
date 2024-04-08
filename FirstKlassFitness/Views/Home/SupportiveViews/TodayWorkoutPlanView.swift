@@ -3,7 +3,6 @@ import SwiftUI
 struct TodayWorkoutPlanView: View {
     @State private var exercises: [Exercise] = []
     #warning("Add Images to Data")
-    #warning("Add SwiftData")
     
     var body: some View {
         VStack {

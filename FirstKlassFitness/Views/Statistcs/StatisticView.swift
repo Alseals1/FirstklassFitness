@@ -28,10 +28,7 @@ struct StatisticView: View {
                             Spacer()
                             
                             AddMealButton(action: {
-                                print(Date.now)
                                 mealLogShown.toggle()
-                                
-                                
                             }, image: "plus", imageColor: .lavender)
                         }
                         
@@ -61,6 +58,8 @@ extension StatisticView {
         for index in indexSet {
             let meal  = meals[index]
             modelContext.delete(meal)
+            print("Latest Deletes \(Date.now) ======")
+            dump("\(meals)")
         }
     }
 }
@@ -77,8 +76,9 @@ extension StatisticView {
     }
     
     func mealByDate() -> [Meal] {
-        var filteredMeals = meals.filter { Calendar.current.isDate($0.date, inSameDayAs: selectedDate)}
-        
+        let filteredMeals = meals.filter { Calendar.current.isDate($0.date, inSameDayAs: selectedDate)}
+        print("Latest Filtered \(Date.now) ======")
+        dump("\(filteredMeals)")
         return filteredMeals
         
     }

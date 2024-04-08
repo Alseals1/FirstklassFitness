@@ -20,10 +20,10 @@ let mockExercise: Exercise = Exercise(
     id: UUID().uuidString
     , name: "Burpees",
     description: "Begin standing, drop into a squat position, kick feet back into a plank position, perform a push-up, return feet to the squat position, and then jump up explosively.",
-    workoutDetailImage: "burpees_detail",
+    workoutDetailImage: "image5",
     duration: 45,
     levelofExercise: "Intermediate",
-    workoutImage: "burpees_home"
+    workoutImage: "image5"
 )
 
 let mockExercises: [Exercise] = [

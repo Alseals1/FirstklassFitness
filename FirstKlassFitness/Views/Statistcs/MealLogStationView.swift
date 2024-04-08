@@ -23,7 +23,8 @@ struct MealLogStationView: View {
                 if !mealTextField.isEmpty {
                     Button(action: {
                         mealLogShown = false
-                        
+                        print("Latest Model Context \(Date.now) ======")
+                        dump("\(modelContext)")
                         addMeal()
                     }, label: {
                         Text("Add Meal")

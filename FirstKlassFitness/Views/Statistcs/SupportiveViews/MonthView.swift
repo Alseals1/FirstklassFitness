@@ -41,13 +41,22 @@ struct MonthView: View {
             
             HStack {
                 ForEach(getDatesForCurrentWeek(), id: \.self) { date in
+                    
                     Button(action: {
                         selectedDate = date
                     }, label: {
-                        DayView(date: date)
+                        VStack(spacing: 0) {
+                            DayView(date: date, selected: selectedDate == date ? true : false)
+                            
+                            if selectedDate == date {
+                                Rectangle()
+                                    .fill(.white)
+                                    .frame(width: 40,height: 1)
+                            }
+                        }
                     })
-                    .background(Capsule()
-                        .fill(date.getDay(from: date) == date.getDay(from: selectedDate) ? Color.lavender : Color.gray.opacity(0.5)))
+                    
+                    
                 }
             }
         }

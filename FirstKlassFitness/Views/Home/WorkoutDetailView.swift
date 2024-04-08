@@ -7,14 +7,25 @@ struct WorkoutDetailView: View {
         ScrollView {
             ZStack(alignment: Alignment(horizontal: .leading, vertical: .bottom)) {
                 ZStack {
+                    Color.black
+                    
+                    
+                    Blur(style: .dark)
+                        .frame(maxWidth: .infinity)
+                    
                     Image(exercise.workoutImage)
                         .resizable()
-                        .frame(maxWidth: .infinity, maxHeight: 500 )
-                    
-                    Image("story-item-overlay")
-                        .resizable()
-                        .frame(maxWidth: .infinity)
+                        .mask(
+                            LinearGradient(gradient: Gradient(stops: [.init(color: .black, location: 0),
+                                                                      .init(color: .black.opacity(0.5), location: 0.7),
+                                                                      .init(color: .black.opacity(0), location: 1.0)]),
+                                           startPoint: .top,
+                                           endPoint: .bottom)
+                        )
+                       
                 }
+                .frame(maxWidth: .infinity, maxHeight: 500 )
+               
                 
                 Text(exercise.name)
                     .foregroundStyle(.white)

@@ -8,6 +8,15 @@
 import Foundation
 
 extension Date {
+    func formattedDatebyMDY() -> String {
+           // Create date formatter
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "MMMM dd, yyyy" // Format string to represent Month, day, and year
+           
+           // Format date to string
+           return dateFormatter.string(from: self)
+       }
+    
     func formattedDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "E MMM d"
