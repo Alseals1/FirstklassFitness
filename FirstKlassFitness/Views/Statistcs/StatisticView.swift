@@ -32,14 +32,18 @@ struct StatisticView: View {
                             }, image: "plus", imageColor: .lavender)
                         }
                         
+                        if mealByDate().isEmpty {
+                            ContentUnavailableView("You didn't log your meal",
+                                                   systemImage: "waveform.path.ecg.rectangle", description: Text("If you forgot to log your meal by simply going to the date and press the plus button 😊"))
+                        } else {
                             List {
-                                
                                 ForEach(mealByDate()) { item in
                                     MealLogItem(calories: item.calories, meal: item.meal, date: item.date)
                                 }
                                 .onDelete(perform: deleteMeal)
                             }
                             .listStyle(.plain)
+                        }
                     }
                     .sheet(isPresented: $mealLogShown, content: {
                         MealLogStationView(mealLogShown: $mealLogShown, selectedDate: $selectedDate)

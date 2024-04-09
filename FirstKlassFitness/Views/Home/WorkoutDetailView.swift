@@ -2,13 +2,13 @@ import SwiftUI
 
 struct WorkoutDetailView: View {
     var exercise: Exercise
+    @State private var notesLogShown: Bool = false
     
     var body: some View {
         ScrollView {
             ZStack(alignment: Alignment(horizontal: .leading, vertical: .bottom)) {
                 ZStack {
                     Color.black
-                    
                     
                     Blur(style: .dark)
                         .frame(maxWidth: .infinity)
@@ -49,9 +49,9 @@ struct WorkoutDetailView: View {
                     .font(.system(size: 18, weight: .medium))
                     .multilineTextAlignment(.leading)
                 
-                NavigationLink {
-                    NotesView()
-                } label: {
+                Button(action: {
+                    notesLogShown.toggle()
+                }, label: {
                     VStack {
                         Text("Notes")
                             .font(.system(size: 20))
@@ -62,8 +62,12 @@ struct WorkoutDetailView: View {
                             .foregroundStyle(.lighterGray)
                     }
                     .foregroundStyle(.white)
-                }
+                })
                 .frame(maxWidth: .infinity ,alignment: .trailing)
+                .popover(isPresented: $notesLogShown) {
+                    NotesLogView()
+                        .presentationDetents([.medium])
+                }
             }
             .padding(.horizontal, 10)
         }

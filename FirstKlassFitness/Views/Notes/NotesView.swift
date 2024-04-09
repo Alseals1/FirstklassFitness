@@ -6,29 +6,51 @@ struct NotesView: View {
     @State private var selection: String?
     
     var body: some View {
-        VStack {
+    
             VStack(alignment: .leading, spacing: 2)  {
-                Text("NOTES")
-                    .font(.system(size: 30))
+                HStack {
+                    Text("NOTES")
+                        .font(.system(size: 30))
+                    Spacer()
+                    Button(action: {
+                        // Action when button is tapped
+                    }) {
+                        Image(systemName: "plus")
+                            .font(.system(size: 30, weight: .bold))
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .background(.lavender)
+                            .clipShape(Circle())
+                            .shadow(color: Color.gray.opacity(0.6), radius: 20, x: 0, y: 5)
+                    }
+                    .padding(.trailing, 15)
+                }
                 Text("Always Take Notes Of Your Failure and Progess")
                     .font(.system(size: 15))
                     .foregroundStyle(Color.secondary)
+                    
                 
                 Rectangle()
                     .fill(Color.lavender)
                     .frame(height: 3)
+                
+                VStack {
+                    notesList
+                }
             }
-            
-            notesList
-        }
-        .padding(.horizontal, 15)
     }
     
     var notesList: some View {
         List {
-            ForEach(noteDemo, id: \.self) { note in
-                Text(note)
-                    .font(.system(size: 18))
+            ForEach(workoutNotes) { note in
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(note.title)
+                        .font(.system(size: 18, weight: .bold))
+                    Text(note.abstract)
+                        .font(.system(size: 18))
+                        .offset(x: 10)
+                }
+               
             }
             .onDelete { offset in
                 noteDemo.remove(atOffsets: offset)
