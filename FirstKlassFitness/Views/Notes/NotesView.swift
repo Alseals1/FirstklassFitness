@@ -16,9 +16,9 @@ struct NotesView: View {
                         // Action when button is tapped
                     }) {
                         Image(systemName: "plus")
-                            .font(.system(size: 30, weight: .bold))
+                            .font(.system(size: 20, weight: .bold))
                             .foregroundColor(.white)
-                            .padding(10)
+                            .padding(5)
                             .background(.lavender)
                             .clipShape(Circle())
                             .shadow(color: Color.gray.opacity(0.6), radius: 20, x: 0, y: 5)

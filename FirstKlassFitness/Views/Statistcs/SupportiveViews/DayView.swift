@@ -28,8 +28,6 @@ struct DayView: View {
         }
     }
 }
-#Preview {
-    DayView(date: .now, selected: true)
-}
+
 
 

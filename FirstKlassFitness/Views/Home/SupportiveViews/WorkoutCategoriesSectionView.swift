@@ -25,7 +25,7 @@ struct WorkoutCategoriesSectionView: View {
             
             ScrollView {
                 LazyVStack(spacing: 30) {
-                    ForEach(exercises) { card in
+                    ForEach(filteredExercises) { card in
                         NavigationLink(
                             destination: WorkoutDetailView(exercise: card),
                             label: {
@@ -69,6 +69,10 @@ struct WorkoutCategoriesSectionView: View {
         }
         .frame(maxWidth: .infinity)
     }
+    
+    var filteredExercises: [Exercise] {
+        exercises.filter { $0.levelofExercise == currentTab.rawValue }
+       }
 }
 
 #Preview {

@@ -1,10 +1,3 @@
-//
-//  NotesLogView.swift
-//  FirstKlassFitness
-//
-//  Created by Alandis Seals on 4/7/24.
-//
-
 import SwiftUI
 
 struct NotesLogView: View {

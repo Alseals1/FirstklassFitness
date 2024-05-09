@@ -14,6 +14,7 @@ struct Exercise: Identifiable, Decodable {
     var duration: Int
     var levelofExercise: String
     var workoutImage: String
+    
 }
 
 let mockExercise: Exercise = Exercise(
