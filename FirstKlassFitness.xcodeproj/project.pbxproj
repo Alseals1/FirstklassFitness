@@ -12,6 +12,7 @@
 		C611E0822B73DC2F0043E335 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611E0812B73DC2F0043E335 /* WorkoutManager.swift */; };
 		C62C5C3C2BAD3D39000A7A95 /* exercises.json in Resources */ = {isa = PBXBuildFile; fileRef = C62C5C3B2BAD3D39000A7A95 /* exercises.json */; };
 		C62C5C3E2BAD4BD8000A7A95 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C5C3D2BAD4BD8000A7A95 /* Date+Extension.swift */; };
+		C65348372BED796E005C8A15 /* NoteEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65348362BED796E005C8A15 /* NoteEditView.swift */; };
 		C6563BE62B88F8CB005F5805 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6563BE52B88F8CB005F5805 /* NotesView.swift */; };
 		C683B86E2B707C2000355482 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B86D2B707C2000355482 /* Meal.swift */; };
 		C683B8702B708A8800355482 /* MealLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B86F2B708A8800355482 /* MealLogItem.swift */; };
@@ -43,6 +44,7 @@
 		C611E0812B73DC2F0043E335 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		C62C5C3B2BAD3D39000A7A95 /* exercises.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exercises.json; sourceTree = "<group>"; };
 		C62C5C3D2BAD4BD8000A7A95 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		C65348362BED796E005C8A15 /* NoteEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditView.swift; sourceTree = "<group>"; };
 		C6563BE52B88F8CB005F5805 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		C683B86D2B707C2000355482 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		C683B86F2B708A8800355482 /* MealLogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogItem.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				C6563BE52B88F8CB005F5805 /* NotesView.swift */,
 				C601D0622BC3A4D700852F28 /* NotesLogView.swift */,
+				C65348362BED796E005C8A15 /* NoteEditView.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				C6CA5E652B56EB61006756EF /* WorkoutLGCardView.swift in Sources */,
 				C6E522CE2B6DA3CC003938E4 /* MealLogStationView.swift in Sources */,
 				C611E0822B73DC2F0043E335 /* WorkoutManager.swift in Sources */,
+				C65348372BED796E005C8A15 /* NoteEditView.swift in Sources */,
 				C6CA5E462B54D8DA006756EF /* ContentView.swift in Sources */,
 				C683B86E2B707C2000355482 /* Meal.swift in Sources */,
 				C6CA5E442B54D8DA006756EF /* FirstKlassFitnessApp.swift in Sources */,

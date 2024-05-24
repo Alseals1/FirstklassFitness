@@ -31,6 +31,11 @@ struct TodayWorkoutPlanView: View {
                                     Image(exercise.workoutImage)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
+                                    Circle()
+                                        .stroke(.lavender, lineWidth: 3)
+                                        
+                                    
+                                   
                                 }
                                 .clipShape(Circle())
                             })

@@ -1,21 +1,22 @@
-//
-//  Notes.swift
-//  FirstKlassFitness
-//
-//  Created by Alandis Seals on 4/9/24.
-//
-
 import Foundation
+import SwiftData
 
-
-struct Notes: Identifiable {
+@Model
+class Notes: Identifiable {
     var id = UUID()
     let title: String
     let abstract: String
     let noteDate: Date
+    
+    init(id: UUID = UUID(), title: String, abstract: String, noteDate: Date = .now) {
+        self.id = id
+        self.title = title
+        self.abstract = abstract
+        self.noteDate = noteDate
+    }
 }
 
-
+/*
 let workoutNotes: [Notes] = [
     Notes(title: "Morning Jog", abstract: "Start your day with a refreshing jog around the park.", noteDate: Date()),
     Notes(title: "Full Body Workout", abstract: "Hit the gym for a complete full-body workout session.", noteDate: Date()),
@@ -33,3 +34,4 @@ let workoutNotes: [Notes] = [
     Notes(title: "Rock Climbing Adventure", abstract: "Conquer new heights and challenge yourself with an exhilarating rock climbing adventure.", noteDate: Date()),
     Notes(title: "Barre Fitness Class", abstract: "Sculpt and tone your muscles with a low-impact, high-intensity barre fitness class.", noteDate: Date())
     ]
+*/

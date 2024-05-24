@@ -34,7 +34,7 @@ struct StatisticView: View {
                         
                         if mealByDate().isEmpty {
                             ContentUnavailableView("You didn't log your meal",
-                                                   systemImage: "waveform.path.ecg.rectangle", description: Text("If you forgot to log your meal by simply going to the date and press the plus button 😊"))
+                                                   systemImage: "waveform.path.ecg.rectangle", description: Text("If you forgot to log your meal go to that date and press the plus button 😊"))
                         } else {
                             List {
                                 ForEach(mealByDate()) { item in

@@ -11,6 +11,6 @@ struct FirstKlassFitnessApp: App {
             }
             .preferredColorScheme(.dark)
         }
-        .modelContainer(for: Meal.self)
+        .modelContainer(for: [Meal.self, Notes.self])
     }
 }

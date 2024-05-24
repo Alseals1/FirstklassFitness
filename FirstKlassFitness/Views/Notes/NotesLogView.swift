@@ -19,12 +19,13 @@ struct NotesLogView: View {
                     VStack(alignment: .trailing) {
                         Button(action: {
                             isNoteSheetShown.toggle()
-                            #warning("Fix This with DEEP LINKING")
                         }, label: {
                             Text("Go to your Notes")
                         })
-                        .fullScreenCover(isPresented: $isNoteSheetShown, content: {
+                        .sheet(isPresented: $isNoteSheetShown, content: {
                             NotesView()
+                                .presentationDetents([.large])
+                           
                         })
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
@@ -84,6 +85,8 @@ struct NotesLogView: View {
                                 .padding(.horizontal)
                         }
                 }
+                .padding(.top)
+                Spacer()
             }
             .padding(.horizontal, 20)
         }
