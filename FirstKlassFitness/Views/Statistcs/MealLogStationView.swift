@@ -8,6 +8,7 @@ struct MealLogStationView: View {
     @State private var logDate: Date = .now
     @Binding var mealLogShown: Bool
     @Binding var selectedDate: Date
+    @State private var animateIcon = false
     
     var body: some View {
         ZStack {
@@ -17,6 +18,31 @@ struct MealLogStationView: View {
                 Text("Log Station")
                     .foregroundStyle(.white)
                     .bold()
+                
+                VStack {
+                    Text("Swipe down to exit")
+                    VStack {
+                        Image(systemName: "chevron.down")
+                            .foregroundColor(.white)
+                            .font(.system(size: 24))
+                            .padding(.top, 2)
+                            .offset(y: animateIcon ? 10 : -10)
+                            .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true), value: animateIcon)
+                            .onAppear {
+                                animateIcon = true
+                            }
+                        Image(systemName: "chevron.down")
+                            .foregroundColor(.white)
+                            .font(.system(size: 24))
+                            .padding(.top, 2)
+                            .offset(y: animateIcon ? 10 : -10)
+                            .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true), value: animateIcon)
+                            .onAppear {
+                                animateIcon = true
+                            }
+                    }
+                }
+                .padding(.top, 5)
                 
                 mealEntryView
                 
