@@ -10,7 +10,7 @@ struct NotesView: View {
     var body: some View {
     
             VStack(alignment: .leading, spacing: 2)  {
-                VStack {
+                VStack(alignment: .leading) {
                     HStack {
                         Text("NOTES")
                             .font(.system(size: 30))
@@ -30,7 +30,7 @@ struct NotesView: View {
                         }
                         .padding(.trailing, 15)
                         .sheet(isPresented: $noteLogShown, content: {
-                            NoteEditView(noteLogShown: $noteLogShown)
+                            NotesLogView(isNotesView: .constant(false))
                                 .presentationDetents([.fraction(0.50), .medium])
                         })
                     }

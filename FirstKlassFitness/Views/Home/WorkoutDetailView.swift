@@ -65,7 +65,7 @@ struct WorkoutDetailView: View {
                 })
                 .frame(maxWidth: .infinity ,alignment: .trailing)
                 .popover(isPresented: $notesLogShown) {
-                    NotesLogView()
+                    NotesLogView(isNotesView: .constant(true))
                         .presentationDetents([.medium])
                 }
             }

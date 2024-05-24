@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         ZStack {
             Color.black
@@ -9,8 +10,6 @@ struct ContentView: View {
                 HomeView()
                     .tabItem{
                        Label("Home", systemImage: "house")
-                            .foregroundStyle(Color.lavender, Color.lavender)
-                            
                     }
                 StatisticView()
                     .tabItem{
@@ -25,6 +24,7 @@ struct ContentView: View {
                         Label("Setting", systemImage: "gear")
                     }
             }
+            .accentColor(.lavender)
         }
     }
 }

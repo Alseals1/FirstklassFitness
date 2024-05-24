@@ -45,14 +45,16 @@ struct MonthView: View {
                     Button(action: {
                         selectedDate = date
                     }, label: {
-                        VStack(spacing: 0) {
+                        ZStack(alignment: .top) {
                             DayView(date: date, selected: selectedDate == date ? true : false)
                             
                             if selectedDate == date {
-                                Rectangle()
-                                    .fill(.white)
-                                    .frame(width: 40,height: 1)
+                                Circle()
+                                    .fill(.lavender)
+                                    .frame(width: 5,height: 5)
+                                    .padding(.top, 2)
                             }
+                               
                         }
                     })
                     

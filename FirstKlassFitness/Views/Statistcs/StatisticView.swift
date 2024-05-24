@@ -4,7 +4,6 @@ import SwiftData
 struct StatisticView: View {
     @Environment(\.modelContext) var modelContext
     @Query var meals: [Meal]
-    
     @State private var selectedDate = Date()
     @State private var mealLogShown = false
     
@@ -84,6 +83,5 @@ extension StatisticView {
         print("Latest Filtered \(Date.now) ======")
         dump("\(filteredMeals)")
         return filteredMeals
-        
     }
 }
