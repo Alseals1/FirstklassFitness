@@ -61,10 +61,10 @@ struct NotesLogView: View {
             
             if !noteTitle.isEmpty && !noteAbstract.isEmpty {
                 Button(action: {
+                    addNotes()
                     noteTitle = ""
                     noteAbstract = ""
-                    print(isNoteSheetShown.description)
-                    addNotes()
+                    
                 }, label: {
                     Text("Add Note")
                         .padding([.horizontal, .vertical], 8)

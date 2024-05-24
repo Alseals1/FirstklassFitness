@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    #warning("Fix Setting")
     var body: some View {
             ScrollView {
                 VStack(spacing: 20) {

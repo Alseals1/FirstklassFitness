@@ -34,6 +34,7 @@
 		C6CA5E652B56EB61006756EF /* WorkoutLGCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E642B56EB61006756EF /* WorkoutLGCardView.swift */; };
 		C6CA5E6C2B571BE6006756EF /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E6B2B571BE6006756EF /* StatisticView.swift */; };
 		C6DBB51D2C0112CD001A356C /* NoteEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DBB51C2C0112CD001A356C /* NoteEditView.swift */; };
+		C6DBB51F2C012B9E001A356C /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DBB51E2C012B9E001A356C /* Setting.swift */; };
 		C6E522CC2B6DA38B003938E4 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E522CB2B6DA38B003938E4 /* View+Extension.swift */; };
 		C6E522CE2B6DA3CC003938E4 /* MealLogStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E522CD2B6DA3CC003938E4 /* MealLogStationView.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		C6CA5E642B56EB61006756EF /* WorkoutLGCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutLGCardView.swift; sourceTree = "<group>"; };
 		C6CA5E6B2B571BE6006756EF /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		C6DBB51C2C0112CD001A356C /* NoteEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteEditView.swift; path = "../../../../../../../Library/Mobile Documents/.Trash/NoteEditView.swift"; sourceTree = "<group>"; };
+		C6DBB51E2C012B9E001A356C /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		C6E522CB2B6DA38B003938E4 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		C6E522CD2B6DA3CC003938E4 /* MealLogStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogStationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 				C611E07F2B73DB7A0043E335 /* Exercise.swift */,
 				C611E0812B73DC2F0043E335 /* WorkoutManager.swift */,
 				C6BA9DB02BC5879A0039175C /* Notes.swift */,
+				C6DBB51E2C012B9E001A356C /* Setting.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				C6A5DE0D2BBF846400112464 /* VisualEffectView.swift in Sources */,
 				C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */,
 				C699ACA52B59B8EA00E62E8B /* AddMealButton.swift in Sources */,
+				C6DBB51F2C012B9E001A356C /* Setting.swift in Sources */,
 				C699ACA02B59B81600E62E8B /* DayView.swift in Sources */,
 				C62C5C3E2BAD4BD8000A7A95 /* Date+Extension.swift in Sources */,
 				C6CA5E6C2B571BE6006756EF /* StatisticView.swift in Sources */,
