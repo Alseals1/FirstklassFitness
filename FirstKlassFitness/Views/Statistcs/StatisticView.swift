@@ -61,8 +61,6 @@ extension StatisticView {
         for index in indexSet {
             let meal  = meals[index]
             modelContext.delete(meal)
-            print("Latest Deletes \(Date.now) ======")
-            dump("\(meals)")
         }
     }
 }
@@ -80,8 +78,6 @@ extension StatisticView {
     
     func mealByDate() -> [Meal] {
         let filteredMeals = meals.filter { Calendar.current.isDate($0.date, inSameDayAs: selectedDate)}
-        print("Latest Filtered \(Date.now) ======")
-        dump("\(filteredMeals)")
         return filteredMeals
     }
 }

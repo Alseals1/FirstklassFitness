@@ -19,7 +19,7 @@ struct ContentView: View {
                     .tabItem{
                       Label("Notes", systemImage: "list.clipboard")
                     }
-                Text("Setting View")
+                SettingView()
                     .tabItem{
                         Label("Setting", systemImage: "gear")
                     }

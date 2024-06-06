@@ -19,12 +19,6 @@ struct DayView: View {
                 .fill(date.getWeekDay(from: date) == Date().getWeekDay(from: .now) && date.getDay(from: date) == Date().getDay(from: .now) ? .lavender : Color.gray.opacity(0.5))
             )
             
-            if selected {
-                Rectangle()
-                    .fill(.white)
-                    .frame(width: 40,height: 2)
-            }
-            
         }
     }
 }

@@ -7,7 +7,7 @@ struct FirstKlassFitnessApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                ContentView()
+                IntroView()
             }
             .preferredColorScheme(.dark)
         }

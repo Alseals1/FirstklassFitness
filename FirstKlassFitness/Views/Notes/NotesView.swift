@@ -8,7 +8,9 @@ struct NotesView: View {
     @State private var noteLogShown: Bool = false
     
     var body: some View {
-    
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
             VStack(alignment: .leading, spacing: 2)  {
                 VStack(alignment: .leading) {
                     HStack {
@@ -49,6 +51,8 @@ struct NotesView: View {
                     notesList
                 }
             }
+        }
+           
            
     }
     
@@ -80,8 +84,6 @@ extension NotesView {
         for index in indexSet {
             let note  = notes[index]
             modelContext.delete(note)
-            print("Latest Deletes \(Date.now) ======")
-            dump("\(notes)")
         }
     }
 }

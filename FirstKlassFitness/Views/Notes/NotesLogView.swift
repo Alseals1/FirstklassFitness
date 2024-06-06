@@ -12,70 +12,75 @@ struct NotesLogView: View {
     
     
     var body: some View {
-        VStack {
-            Text("Log Station")
-                .foregroundStyle(.white)
-                .bold()
+        ZStack {
+            Color.black.ignoresSafeArea()
             
             VStack {
-                Text("Swipe down to exit")
+                Text("Log Station")
+                    .foregroundStyle(.white)
+                    .bold()
+                
                 VStack {
-                    Image(systemName: "chevron.down")
-                        .foregroundColor(.white)
-                        .font(.system(size: 24))
-                        .padding(.top, 2)
-                        .offset(y: animateIcon ? 10 : -10)
-                        .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true), value: animateIcon)
-                        .onAppear {
-                            animateIcon = true
-                        }
-                    Image(systemName: "chevron.down")
-                        .foregroundColor(.white)
-                        .font(.system(size: 24))
-                        .padding(.top, 2)
-                        .offset(y: animateIcon ? 10 : -10)
-                        .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true), value: animateIcon)
-                        .onAppear {
-                            animateIcon = true
-                        }
+                    Text("Swipe down to exit")
+                    VStack {
+                        Image(systemName: "chevron.down")
+                            .foregroundColor(.white)
+                            .font(.system(size: 24))
+                            .padding(.top, 2)
+                            .offset(y: animateIcon ? 10 : -10)
+                            .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true), value: animateIcon)
+                            .onAppear {
+                                animateIcon = true
+                            }
+                        Image(systemName: "chevron.down")
+                            .foregroundColor(.white)
+                            .font(.system(size: 24))
+                            .padding(.top, 2)
+                            .offset(y: animateIcon ? 10 : -10)
+                            .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true), value: animateIcon)
+                            .onAppear {
+                                animateIcon = true
+                            }
+                    }
                 }
-            }
-            .padding(.top, 5)
-            
-            if isNotesView {
-                VStack(alignment: .trailing) {
+                .padding(.top, 5)
+                
+                if isNotesView {
+                    VStack(alignment: .trailing) {
+                        Button(action: {
+                            isNoteSheetShown.toggle()
+                        }, label: {
+                            Text("Go to your Notes")
+                        })
+                        .sheet(isPresented: $isNoteSheetShown, content: {
+                            NotesView()
+                                .presentationDetents([.large])
+                        })
+                    }
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                }
+                
+                notesEntryView
+                
+                if !noteTitle.isEmpty && !noteAbstract.isEmpty {
                     Button(action: {
-                        isNoteSheetShown.toggle()
+                        addNotes()
+                        noteTitle = ""
+                        noteAbstract = ""
+                        
                     }, label: {
-                        Text("Go to your Notes")
+                        Text("Add Note")
+                            .padding([.horizontal, .vertical], 8)
+                            .foregroundStyle(.white)
+                            .background(.lavender)
+                            .cornerRadius(10)
                     })
-                    .sheet(isPresented: $isNoteSheetShown, content: {
-                        NotesView()
-                            .presentationDetents([.large])
-                    })
+                    .padding()
+                    .buttonStyle(.plain)
                 }
-                .frame(maxWidth: .infinity, alignment: .trailing)
-            }
-            
-            notesEntryView
-            
-            if !noteTitle.isEmpty && !noteAbstract.isEmpty {
-                Button(action: {
-                    addNotes()
-                    noteTitle = ""
-                    noteAbstract = ""
-                    
-                }, label: {
-                    Text("Add Note")
-                        .padding([.horizontal, .vertical], 8)
-                        .foregroundStyle(.white)
-                        .background(.lavender)
-                        .cornerRadius(10)
-                })
-                .padding()
-                .buttonStyle(.plain)
             }
         }
+       
     }
     
     var notesEntryView: some View {
