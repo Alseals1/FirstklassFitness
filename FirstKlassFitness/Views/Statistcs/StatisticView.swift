@@ -7,6 +7,8 @@ struct StatisticView: View {
     @State private var selectedDate = Date()
     @State private var mealLogShown = false
     
+    #warning("Add Meal Edit")
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -16,7 +18,7 @@ struct StatisticView: View {
                     MonthView(selectedDate: $selectedDate)
                         .padding(.vertical)
                     
-                    ProgressInformationView(calories: totalCalories, goalCalories: 3000)
+                    ProgressInformationView(calories: totalCalories)
                         .padding(15)
                     VStack(alignment: .leading) {
                         HStack {

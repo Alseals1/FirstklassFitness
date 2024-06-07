@@ -17,6 +17,7 @@ struct HomeView: View {
                         .foregroundStyle(Color.white)
                     Spacer()
                 }
+                .padding([.top, .horizontal])
                 TodayWorkoutPlanView()
                 WorkoutCategoriesSectionView()
             }

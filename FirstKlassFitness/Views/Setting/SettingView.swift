@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 struct SettingView: View {
     @State var name: String = ""
@@ -7,7 +8,10 @@ struct SettingView: View {
     @AppStorage("name") var currentUserName: String?
     @AppStorage("age") var currentUserAge: Int?
     @AppStorage("gender") var currentUserGender: String?
+    @AppStorage("weight") var currentUserWeight: String?
+    @AppStorage("height") var currentUserHeight: String?
     @AppStorage("signed_in") var currentUserSignedIn: Bool = false
+    @Environment(\.modelContext) var modelContext
     
     var body: some View {
         VStack {
@@ -20,63 +24,13 @@ struct SettingView: View {
                             .aspectRatio(contentMode: .fit)
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
-                    VStack(alignment: .leading) {
-                        CustonTextField(textFieldTitle: "Name", name: $name)
-                        CustonTextField(textFieldTitle: "Age", name: $age)
-                        CustonTextField(textFieldTitle: "Calorie Goal", name: $goal)
-                            .keyboardType(.numberPad)
-                        
-                        Spacer()
-                    }
+                    
+                   userEntry
                 }
                 .padding(.horizontal)
             }
-            
-            HStack {
-                Text("Save")
-                    .foregroundStyle(.lavender)
-                    .font(.headline)
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(.charcoalGray)
-                    .onTapGesture {
-                        save()
-                    }
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                
-                Text("Sign Out")
-                    .foregroundStyle(.lavender)
-                    .font(.headline)
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(.charcoalGray)
-                    .onTapGesture {
-                        signOut()
-                    }
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-            }
+           bottomButton
         }
-       
-    }
-}
-
-struct CustonTextField: View {
-    var textFieldTitle: String
-    @Binding var name: String
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(textFieldTitle)
-                .font(.title)
-                .foregroundStyle(.lighterGray)
-            TextField("", text: $name)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 15).fill(Color.gray.opacity(0.2)))
-                .foregroundStyle(.lighterGray)
-                .tint(.royalPurple)
-            
-        }
-        
     }
 }
 
@@ -87,27 +41,77 @@ struct CustonTextField: View {
     }
 }
 
+/// View Extension
+extension SettingView {
+    var userEntry: some View {
+        VStack(alignment: .leading) {
+            CustomTextField(textFieldTitle: "Name", name: $name)
+            CustomTextField(textFieldTitle: "Age", name: $age)
+            CustomTextField(textFieldTitle: "Calorie Goal", name: $goal)
+                .keyboardType(.numberPad)
+        }
+    }
+    
+    var bottomButton: some View {
+        HStack {
+            Text("Save")
+                .foregroundStyle(.lavender)
+                .font(.headline)
+                .frame(height: 55)
+                .frame(maxWidth: .infinity)
+                .background(.charcoalGray)
+                .onTapGesture {
+                    save()
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+            
+            Text("Sign Out")
+                .foregroundStyle(.lavender)
+                .font(.headline)
+                .frame(height: 55)
+                .frame(maxWidth: .infinity)
+                .background(.charcoalGray)
+                .onTapGesture {
+                    signOut()
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+        }
+        .padding(.bottom)
+    }
+}
+
+/// Function Extension
 extension SettingView {
     func save() {
         currentUserName = name
         currentUserAge = Int(age)
         //currentUserGender = gender
         withAnimation(.bouncy()) {
-            currentUserSignedIn = true
+            name = ""
+            age = ""
+            goal = ""
         }
-        
-        #warning("Need to clear text field")
     }
     
     func signOut() {
         currentUserName = nil
         currentUserAge = nil
         currentUserGender = nil
-#warning("Delete swift data")
-#warning("Add alerts for delete")
+        currentUserHeight = nil
+        currentUserWeight = nil
+        
+
+        #warning("Add alerts for delete")
         
         withAnimation(.spring()) {
             currentUserSignedIn = false
+            
+            do {
+                try modelContext.delete(model: Meal.self)
+                try modelContext.delete(model: Notes.self)
+            } catch {
+                print("Failed to clear all Country and City data.")
+            }
         }
     }
 }

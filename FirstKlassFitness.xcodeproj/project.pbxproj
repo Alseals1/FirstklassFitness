@@ -19,6 +19,7 @@
 		C683B86E2B707C2000355482 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B86D2B707C2000355482 /* Meal.swift */; };
 		C683B8702B708A8800355482 /* MealLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B86F2B708A8800355482 /* MealLogItem.swift */; };
 		C683B88E2B70943500355482 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C683B88D2B70943500355482 /* WorkoutDetailView.swift */; };
+		C69852D62C13540C003CA5A6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69852D52C13540C003CA5A6 /* CustomTextField.swift */; };
 		C699AC9E2B59B7D400E62E8B /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699AC9D2B59B7D400E62E8B /* MonthView.swift */; };
 		C699ACA02B59B81600E62E8B /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699AC9F2B59B81600E62E8B /* DayView.swift */; };
 		C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */; };
@@ -55,6 +56,7 @@
 		C683B86D2B707C2000355482 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		C683B86F2B708A8800355482 /* MealLogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogItem.swift; sourceTree = "<group>"; };
 		C683B88D2B70943500355482 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
+		C69852D52C13540C003CA5A6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C699AC9D2B59B7D400E62E8B /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		C699AC9F2B59B81600E62E8B /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInfomationView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		C6CA5E5C2B54E809006756EF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C69852D52C13540C003CA5A6 /* CustomTextField.swift */,
 				C6E522CA2B6DA36B003938E4 /* Extensions */,
 				C699ACA32B59B8D000E62E8B /* CustomButtons */,
 				C6CA5E5E2B54E870006756EF /* CustomFonts */,
@@ -358,6 +361,7 @@
 				C6DBB51D2C0112CD001A356C /* NoteEditView.swift in Sources */,
 				C6CA5E462B54D8DA006756EF /* ContentView.swift in Sources */,
 				C683B86E2B707C2000355482 /* Meal.swift in Sources */,
+				C69852D62C13540C003CA5A6 /* CustomTextField.swift in Sources */,
 				C6CA5E442B54D8DA006756EF /* FirstKlassFitnessApp.swift in Sources */,
 				C6563BE62B88F8CB005F5805 /* NotesView.swift in Sources */,
 				C683B8702B708A8800355482 /* MealLogItem.swift in Sources */,
