@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct CustomTextField: View {
     var textFieldTitle: String
     @Binding var name: String
@@ -18,12 +17,37 @@ struct CustomTextField: View {
                 .font(.title)
                 .foregroundStyle(.lighterGray)
             TextField("", text: $name)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 15).fill(Color.gray.opacity(0.2)))
-                .foregroundStyle(.lighterGray)
-                .tint(.royalPurple)
+                .font(.headline)
+                .foregroundStyle(.lavender)
+                .frame(height: 55)
+                .padding(.horizontal)
+                .background(Color(.charcoalGray))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
             
         }
         
+    }
+}
+
+struct OnBoardingTextField: View {
+    var placeholder: String
+    @Binding var text: String
+    
+    var body: some View {
+        ZStack(alignment: .leading) {
+            TextField("", text: $text)
+                .font(.headline)
+                .foregroundStyle(.lavender)
+                .frame(height: 55)
+                .padding(.horizontal)
+                .background(Color(.white))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+            
+            if text.isEmpty {
+                           Text(placeholder)
+                    .foregroundColor(.charcoalGray)
+                               .padding(.leading, 10)
+                       }
+        }
     }
 }

@@ -25,6 +25,7 @@
 		C699ACA22B59B86200E62E8B /* ProgressInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */; };
 		C699ACA52B59B8EA00E62E8B /* AddMealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C699ACA42B59B8EA00E62E8B /* AddMealButton.swift */; };
 		C6A5DE0D2BBF846400112464 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A5DE0C2BBF846400112464 /* VisualEffectView.swift */; };
+		C6A811E32C16A1FC00413699 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A811E22C16A1FC00413699 /* DotView.swift */; };
 		C6BA9DB12BC5879A0039175C /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BA9DB02BC5879A0039175C /* Notes.swift */; };
 		C6CA5E442B54D8DA006756EF /* FirstKlassFitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E432B54D8DA006756EF /* FirstKlassFitnessApp.swift */; };
 		C6CA5E462B54D8DA006756EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA5E452B54D8DA006756EF /* ContentView.swift */; };
@@ -62,6 +63,7 @@
 		C699ACA12B59B86200E62E8B /* ProgressInfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInfomationView.swift; sourceTree = "<group>"; };
 		C699ACA42B59B8EA00E62E8B /* AddMealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealButton.swift; sourceTree = "<group>"; };
 		C6A5DE0C2BBF846400112464 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		C6A811E22C16A1FC00413699 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
 		C6BA9DB02BC5879A0039175C /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		C6CA5E402B54D8DA006756EF /* FirstKlassFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstKlassFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CA5E432B54D8DA006756EF /* FirstKlassFitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstKlassFitnessApp.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				C63E47D52C03E80D00E09318 /* OnboardingView.swift */,
 				C630B0342C126259001CB321 /* IntroView.swift */,
+				C6A811E22C16A1FC00413699 /* DotView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				C6E522CE2B6DA3CC003938E4 /* MealLogStationView.swift in Sources */,
 				C63E47D62C03E80D00E09318 /* OnboardingView.swift in Sources */,
 				C611E0822B73DC2F0043E335 /* WorkoutManager.swift in Sources */,
+				C6A811E32C16A1FC00413699 /* DotView.swift in Sources */,
 				C6DBB51D2C0112CD001A356C /* NoteEditView.swift in Sources */,
 				C6CA5E462B54D8DA006756EF /* ContentView.swift in Sources */,
 				C683B86E2B707C2000355482 /* Meal.swift in Sources */,

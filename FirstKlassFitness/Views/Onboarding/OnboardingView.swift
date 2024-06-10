@@ -31,7 +31,6 @@ struct OnboardingView: View {
     
     var body: some View {
         ZStack {
-            //content
             ZStack {
                 switch onboardingState {
                 case 0:
@@ -61,6 +60,7 @@ struct OnboardingView: View {
             //Button
             VStack {
                 Spacer()
+                navBar
                 bottomButton
             }
             .padding(30)
@@ -78,19 +78,46 @@ struct OnboardingView: View {
 
 // MARK: Views
 extension OnboardingView {
-    private var bottomButton: some View {
-        Text(onboardingState == 0 ? "SIGN UP" : onboardingState == 4 ? "Calculate" :
-                onboardingState == 5 ? "Finished" :
-                        "Next")
-        .font(.headline)
-        .foregroundStyle(.charcoalGray)
-        .frame(height: 55)
-        .frame(maxWidth: .infinity)
-        .background(.white)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
-        .onTapGesture {
-            onboardingState == 4 ? calculateBMIAndCalorieGoal() :  handleNextButtonPressed()
+    private var navBar: some View {
+        HStack {
+            HStack {
+                ForEach(0..<5, id: \.self) { index in
+                    DotView(index: index, currentPage: self.$onboardingState)
+                }
+            }
         }
+    }
+    
+    private var bottomButton: some View {
+        HStack {
+            if onboardingState > 0 {
+                Text("Back")
+                .font(.headline)
+                .foregroundStyle(.charcoalGray)
+                .frame(height: 55)
+                .frame(maxWidth: .infinity)
+                .background(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .onTapGesture {
+                    withAnimation(.spring) {
+                        onboardingState -= 1
+                    }
+                }
+            }
+            Text(onboardingState == 0 ? "SIGN UP" : onboardingState == 4 ? "Calculate" :
+                    onboardingState == 5 ? "Finished" :
+                            "Next")
+            .font(.headline)
+            .foregroundStyle(.charcoalGray)
+            .frame(height: 55)
+            .frame(maxWidth: .infinity)
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .onTapGesture {
+                onboardingState == 4 ? calculateBMIAndCalorieGoal() :  handleNextButtonPressed()
+            }
+        }
+     
     }
     
     private var welcomeSection: some View {
@@ -131,14 +158,7 @@ extension OnboardingView {
                 .font(.largeTitle)
                 .fontWeight(.semibold)
                 .foregroundStyle(.white)
-            
-            TextField("Your name here...", text: $name)
-                .font(.headline)
-                .foregroundStyle(.lavender)
-                .frame(height: 55)
-                .padding(.horizontal)
-                .background(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            OnBoardingTextField(placeholder: "Your name here...", text: $name)
             
             Spacer()
             Spacer()
@@ -197,36 +217,25 @@ extension OnboardingView {
     }
     
     private var weightHeightSection: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 10) {
             
-            VStack(spacing: 3) {
-                Text("Height")
-                    .font(.headline)
-                    .padding()
+            VStack() {
+                VStack(spacing: 2) {
+                    Text("Enter height in cm")
+                        .font(.caption)
+                }
                 
-                TextField("H", text: $height)
-                    .keyboardType(.decimalPad)
-                    .font(.headline)
-                    .foregroundStyle(.lavender)
-                    .frame(height: 55)
-                    .padding(.horizontal)
-                    .background(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                OnBoardingTextField(placeholder: "", text: $height)
+                    .keyboardType(.numberPad)
+                
             }
-            VStack(spacing: 10) {
-                Text("Weight")
-                    .font(.headline)
-                    .padding()
-                
-                
-                TextField("W", text: $weight)
-                    .keyboardType(.decimalPad)
-                    .font(.headline)
-                    .foregroundStyle(.lavender)
-                    .frame(height: 55)
-                    .padding(.horizontal)
-                    .background(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            VStack {
+                VStack(spacing: 2) {
+                    Text("Enter weight in lbs")
+                        .font(.caption)
+                }
+                OnBoardingTextField(placeholder: "", text: $weight)
+                    .keyboardType(.numberPad)
             }
         }
         .padding(.horizontal, 80)
@@ -291,12 +300,10 @@ extension OnboardingView {
         currentUserHeight = height
         currentUserWeight = weight
         currentUserCalorieGoal = calorieGoal
-        print(currentUserCalorieGoal)
         
         withAnimation(.bouncy()) {
             currentUserSignedIn = true
         }
-        
     }
     
     func showAlert(title: String) {
@@ -308,8 +315,6 @@ extension OnboardingView {
         let heightInMeters = (Double(height) ?? 0) / 100
         let weightInKg = Double(weight)
         let ageInYears = Double(age)
-        
-       
         
         // Calculate Calorie Goal (using Mifflin-St Jeor Equation for simplicity)
         let bmr: Double
@@ -337,7 +342,7 @@ extension OnboardingView {
         switch onboardingState {
         case 4:
             guard height.count > 1 && weight.count > 1 else {
-                showAlert(title: "To calculate you BMI and Calorie Goals properly we must have you weight and height")
+                showAlert(title: "To calculate you BMI and Calorie Goals properly we must have your weight and height")
                 return
             }
             
@@ -350,4 +355,3 @@ extension OnboardingView {
         }
     }
 }
-

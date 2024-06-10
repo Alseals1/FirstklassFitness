@@ -62,6 +62,8 @@ extension SettingView {
                 .background(.charcoalGray)
                 .onTapGesture {
                     save()
+                    
+                    print(goal)
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 15))
             
@@ -91,6 +93,7 @@ extension SettingView {
             age = ""
             goal = ""
         }
+        
     }
     
     func signOut() {
