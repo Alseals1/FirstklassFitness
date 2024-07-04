@@ -6,6 +6,8 @@ struct NotesView: View {
     @Environment(\.modelContext) var modelContext
     @State private var selection: String?
     @State private var noteLogShown: Bool = false
+    @State var noteToEdit: Notes?
+    
     
     var body: some View {
         ZStack {
@@ -16,7 +18,6 @@ struct NotesView: View {
                     HStack {
                         Text("NOTES")
                             .font(.system(size: 30))
-                        
                            
                         Spacer()
                         Button(action: {
@@ -52,6 +53,9 @@ struct NotesView: View {
                 }
             }
         }
+        .sheet(item: $noteToEdit) { note in
+            NoteEditingView(note: note)
+        }
            
            
     }
@@ -59,19 +63,20 @@ struct NotesView: View {
     var notesList: some View {
         List {
             ForEach(notes) { note in
-                NavigationLink {
-                    NoteEditView(noteLogShown: $noteLogShown)
-                } label: {
+                HStack {
                     VStack(alignment: .leading, spacing: 5) {
                         Text(note.title)
                             .font(.system(size: 18, weight: .bold))
                         Text(note.abstract)
                             .font(.system(size: 18))
                             .offset(x: 10)
-                    }
                 }
-                
-                
+                    Spacer()
+                    Image(systemName: "arrow.right")
+                }
+                    .onTapGesture {
+                        noteToEdit = note
+                    }
             }
             .onDelete(perform: deleteNote)
         }

@@ -1,9 +1,18 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    //App Storage
+    @AppStorage("name") var currentUserName: String?
+    @AppStorage("age") var currentUserAge: Int?
+    @AppStorage("gender") var currentUserGender: String?
+    @AppStorage("weight") var currentUserWeight: String?
+    @AppStorage("height") var currentUserHeight: String?
+    @AppStorage("signed_in") var currentUserSignedIn: Bool = false
+    @AppStorage("calorieGoal") var currentUserCalorieGoal: Double?
+    
     @State var onboardingState: Int = 0
     let transition: AnyTransition = .asymmetric(insertion: .move(edge: .top), removal: .move(edge: .bottom))
-    //Calorie Goal
+    
     //Onboarding inputs
     @State var name: String = ""
     @State var age: Double = 50
@@ -11,22 +20,12 @@ struct OnboardingView: View {
     @State var height: String = ""
     @State var weight: String = ""
     
+    @State private var bmi: Double?
+    @State private var calorieGoal: Double?
+    
     //Onboarding alerts
     @State var alertTitle: String = ""
     @State var showAlert: Bool = false
-    
-    //App Storage
-    @AppStorage("name") var currentUserName: String?
-    @AppStorage("age") var currentUserAge: Int?
-    @AppStorage("gender") var currentUserGender: String?
-#warning("Fix This Calorie Goal Part")
-    @AppStorage("weight") var currentUserWeight: String?
-    @AppStorage("height") var currentUserHeight: String?
-    @AppStorage("signed_in") var currentUserSignedIn: Bool = false
-    @AppStorage("calorieGoal") var currentUserCalorieGoal: Double?
-    
-    @State private var bmi: Double?
-    @State private var calorieGoal: Double?
     
     
     var body: some View {

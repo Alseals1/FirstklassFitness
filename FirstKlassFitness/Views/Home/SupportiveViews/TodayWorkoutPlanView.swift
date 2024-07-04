@@ -22,7 +22,7 @@ struct TodayWorkoutPlanView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(exercises ) { exercise in
+                    ForEach(exercises) { exercise in
                      
                         NavigationLink(
                             destination: WorkoutDetailView(exercise: exercise),

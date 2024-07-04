@@ -4,9 +4,9 @@ import SwiftData
 @Model
 class Notes: Identifiable {
     var id = UUID()
-    let title: String
-    let abstract: String
-    let noteDate: Date
+    var title: String
+    var abstract: String
+    var noteDate: Date
     
     init(id: UUID = UUID(), title: String, abstract: String, noteDate: Date = .now) {
         self.id = id

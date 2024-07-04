@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct WorkoutCategoriesSectionView: View {
-    @State private var exercises: [Exercise] = []
+   @State private var exercises: [Exercise] = []
     @State private var currentTab: Difficulty = .beginner
     var tabs: [Difficulty] = [.beginner, .intermediate, .advanced]
     
@@ -13,36 +13,55 @@ struct WorkoutCategoriesSectionView: View {
                     .bold()
                 
                 Spacer()
-                
-                Button(action: {}, label: {
+
+                NavigationLink {
+                    AllExerciseView(exercises: exercises)
+                } label: {
                     Text("See All")
                         .foregroundStyle(.lavender)
-                })
-                .buttonStyle(.plain)
+                }
             }
             
             category
             
-            ScrollView {
-                LazyVStack(spacing: 30) {
-                    ForEach(filteredExercises) { card in
-                        NavigationLink(
-                            destination: WorkoutDetailView(exercise: card),
-                            label: {
-                                WorkoutLGCardView(exercise: card)
-                            })
-                    }
-                }
-                .scrollTargetLayout()
-            }
-            .scrollTargetBehavior(.viewAligned)
-            .safeAreaPadding(.horizontal, 5)
+           workouts
         }
         .onAppear {
             ExerciseManager.loadExercises { loadedExercise in
                 self.exercises = loadedExercise
             }
         }
+    }
+  
+}
+
+#Preview {
+    NavigationStack {
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+            WorkoutCategoriesSectionView()
+        }
+    }
+    .preferredColorScheme(.dark)
+}
+
+extension WorkoutCategoriesSectionView {
+    var workouts: some View {
+        ScrollView {
+            LazyVStack(spacing: 30) {
+                ForEach(filteredExercises) { card in
+                    NavigationLink(
+                        destination: WorkoutDetailView(exercise: card),
+                        label: {
+                            WorkoutLGCardView(exercise: card)
+                        })
+                }
+            }
+            .scrollTargetLayout()
+        }
+        .scrollTargetBehavior(.viewAligned)
+        .safeAreaPadding(.horizontal, 5)
     }
     
     var category: some View {
@@ -73,12 +92,4 @@ struct WorkoutCategoriesSectionView: View {
     var filteredExercises: [Exercise] {
         exercises.filter { $0.levelofExercise == currentTab.rawValue }
        }
-}
-
-#Preview {
-    ZStack {
-        Color.black
-            .ignoresSafeArea()
-        WorkoutCategoriesSectionView()
-    }
 }
