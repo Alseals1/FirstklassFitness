@@ -12,18 +12,26 @@ struct CustomTextField: View {
     @Binding var name: String
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0) {
             Text(textFieldTitle)
+                .font(.custom("Oswald-SemiBold", size: 18))
                 .font(.title)
                 .foregroundStyle(.lighterGray)
-            TextField("", text: $name)
-                .font(.headline)
-                .foregroundStyle(.lavender)
-                .frame(height: 55)
-                .padding(.horizontal)
-                .background(Color(.charcoalGray))
-                .clipShape(RoundedRectangle(cornerRadius: 8))
+           
+            VStack(spacing: 0) {
+                TextField("", text: $name)
+                    .font(.headline)
+                    .foregroundStyle(.lavender)
+                    .frame(height: 45)
+                    .padding(.horizontal)
+                
+                RoundedRectangle(cornerRadius: 5)
+                    .frame(height: 2)
+                    .frame(maxWidth: .infinity)
+                    .padding(.bottom, 10)
+            }
         }
+       
     }
 }
 
@@ -43,7 +51,7 @@ struct OnBoardingTextField: View {
             
             if text.isEmpty {
                            Text(placeholder)
-                    .foregroundColor(.charcoalGray)
+                                .foregroundColor(.charcoalGray)
                                .padding(.leading, 10)
                        }
         }

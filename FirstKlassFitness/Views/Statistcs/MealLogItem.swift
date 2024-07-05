@@ -17,20 +17,20 @@ struct MealLogItem: View {
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(meal)
-                        .font(.system(size: 17, weight: .semibold))
+                        .font(.custom("Oswald-SemiBold", size: 17))
                         .foregroundStyle(.lighterGray)
                     Spacer()
                     Text(date.formattedTime())
-                        .font(.system(size: 13, weight: .semibold))
+                        .font(.custom("Oswald-Regular", size: 13))
                         .foregroundStyle(.lavender)
                 }
                 HStack(spacing: 4) {
                     Text("Calories:")
-                        .font(.system(size: 17, weight: .semibold))
+                        .font(.custom("Oswald-SemiBold", size: 17))
                     .foregroundStyle(.lighterGray)
                     
                     Text("\(calories)")
-                        .font(.system(size: 17, weight: .semibold))
+                        .font(.custom("Oswald-SemiBold", size: 17))
                         .foregroundStyle(.lavender)
                 }
             }

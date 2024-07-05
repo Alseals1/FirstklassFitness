@@ -46,6 +46,7 @@
 		C6DBB51F2C012B9E001A356C /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DBB51E2C012B9E001A356C /* Setting.swift */; };
 		C6E522CC2B6DA38B003938E4 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E522CB2B6DA38B003938E4 /* View+Extension.swift */; };
 		C6E522CE2B6DA3CC003938E4 /* MealLogStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E522CD2B6DA3CC003938E4 /* MealLogStationView.swift */; };
+		C6FDBC5E2C3852E7009799E3 /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6FDBC5D2C3852E7009799E3 /* Oswald-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		C6DBB51E2C012B9E001A356C /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		C6E522CB2B6DA38B003938E4 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		C6E522CD2B6DA3CC003938E4 /* MealLogStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogStationView.swift; sourceTree = "<group>"; };
+		C6FDBC5D2C3852E7009799E3 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				C6D7F13A2C37BE7A009E714A /* Oswald-Bold.ttf */,
+				C6FDBC5D2C3852E7009799E3 /* Oswald-SemiBold.ttf */,
 				C6D7F1382C37BE5D009E714A /* Oswald-Regular.ttf */,
 				C6CA5E5F2B54E885006756EF /* Roboto-Regular.ttf */,
 			);
@@ -349,6 +352,7 @@
 				C6CA5E5B2B54E287006756EF /* Theme.xcassets in Resources */,
 				C6CA5E4B2B54D8DB006756EF /* Preview Assets.xcassets in Resources */,
 				C6CA5E602B54E885006756EF /* Roboto-Regular.ttf in Resources */,
+				C6FDBC5E2C3852E7009799E3 /* Oswald-SemiBold.ttf in Resources */,
 				C6D7F13B2C37BE7A009E714A /* Oswald-Bold.ttf in Resources */,
 				C6CA5E482B54D8DB006756EF /* Assets.xcassets in Resources */,
 			);

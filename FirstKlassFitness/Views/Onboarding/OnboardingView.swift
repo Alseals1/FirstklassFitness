@@ -91,7 +91,7 @@ extension OnboardingView {
         HStack {
             if onboardingState > 0 {
                 Text("Back")
-                .font(.headline)
+                .font(.custom("Oswald-SemiBold", size: 16))
                 .foregroundStyle(.charcoalGray)
                 .frame(height: 55)
                 .frame(maxWidth: .infinity)
@@ -106,7 +106,7 @@ extension OnboardingView {
             Text(onboardingState == 0 ? "SIGN UP" : onboardingState == 4 ? "Calculate" :
                     onboardingState == 5 ? "Finished" :
                             "Next")
-            .font(.headline)
+            .font(.custom("Oswald-SemiBold", size: 16))
             .foregroundStyle(.charcoalGray)
             .frame(height: 55)
             .frame(maxWidth: .infinity)

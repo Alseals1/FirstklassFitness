@@ -8,7 +8,7 @@ struct MealEditView: View {
         VStack(spacing: 30) {
             VStack(alignment: .leading) {
                 Text("Meal")
-                    .fontWeight(.semibold)
+                    .font(.custom("Oswald-SemiBold", size: 14))
                     .foregroundStyle(.white)
                 
                 TextField(meal.meal, text: $meal.meal)
@@ -23,7 +23,7 @@ struct MealEditView: View {
             
             VStack(alignment: .leading) {
                 Text("Calories")
-                    .fontWeight(.semibold)
+                    .font(.custom("Oswald-SemiBold", size: 14))
                     .foregroundStyle(.white)
                 
                 TextField(meal.stringCal, text: bindingString(from: $meal.calories))
@@ -37,13 +37,19 @@ struct MealEditView: View {
                     }
             }
             
-            Button(action: { dismiss() }, label: {
-                Text("Done")
-                    .foregroundStyle(.royalPurple)
-                    
-            })
-            .padding()
-            .background(RoundedRectangle(cornerRadius: 10).fill(.charcoalGray))
+                Button(action: {
+                    dismiss()
+                }, label: {
+                    Text("Done")
+                        .font(.custom("Oswald-Bold", size: 14))
+                        .padding([.horizontal, .vertical], 8)
+                        .foregroundStyle(.white)
+                        .background(.lavender)
+                        .cornerRadius(10)
+                })
+                .disabled(meal.meal.isEmpty ? true : false)
+                .padding()
+                .buttonStyle(.plain)
         }
         .padding(.horizontal, 20)
     }

@@ -16,15 +16,15 @@ struct MealLogStationView: View {
                 .ignoresSafeArea()
             VStack {
                 Text("Log Station")
+                    .font(.custom("Oswald-Bold", size: 18))
                     .foregroundStyle(.white)
-                    .bold()
                 
                 VStack {
                     Text("Swipe down to exit")
                     VStack {
                         Image(systemName: "chevron.down")
                             .foregroundColor(.white)
-                            .font(.system(size: 24))
+                            .font(.custom("Oswald-Regular", size: 20))
                             .padding(.top, 2)
                             .offset(y: animateIcon ? 10 : -10)
                             .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: true), value: animateIcon)
@@ -52,6 +52,7 @@ struct MealLogStationView: View {
                         addMeal()
                     }, label: {
                         Text("Add Meal")
+                            .font(.custom("Oswald-Bold", size: 14))
                             .padding([.horizontal, .vertical], 8)
                             .foregroundStyle(.white)
                             .background(.lavender)
@@ -69,7 +70,7 @@ struct MealLogStationView: View {
         VStack(spacing: 30) {
             VStack(alignment: .leading) {
                 Text("Meal")
-                    .fontWeight(.semibold)
+                    .font(.custom("Oswald-SemiBold", size: 16))
                     .foregroundStyle(.white)
                 
                 TextField("", text: $mealTextField)
@@ -84,18 +85,14 @@ struct MealLogStationView: View {
             
             VStack(alignment: .leading) {
                 Text("Calories")
-                    .fontWeight(.semibold)
+                    .font(.custom("Oswald-SemiBold", size: 16))
                     .foregroundStyle(.white)
                 
-                TextField("", text: $caloriesTextField)
+                TextField("Calories", text: $caloriesTextField)
                     .padding()
                     .foregroundStyle(.white)
                     .background(RoundedRectangle(cornerRadius: 10)
                         .fill(.gray.opacity(0.1)))
-                    .placeholder(when: mealTextField.isEmpty) {
-                        Text("Log Your Calories").foregroundColor(.gray)
-                            .padding(.horizontal)
-                    }
             }
         }
         .padding(.horizontal, 20)

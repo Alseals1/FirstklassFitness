@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Oswald-SemiBold.ttf</string>
 		<string>Oswald-Regular.ttf</string>
 		<string>Oswald-Bold.ttf</string>
 		<string>Roboto-Regular.ttf</string>

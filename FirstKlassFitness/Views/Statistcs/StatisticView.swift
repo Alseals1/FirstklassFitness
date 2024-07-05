@@ -9,7 +9,6 @@ struct StatisticView: View {
     @State private var mealLogShown = false
     @State var mealToEdit: Meal?
     
-    #warning("Add Meal Edit")
     var body: some View {
         NavigationStack {
             ZStack {
@@ -41,7 +40,7 @@ extension StatisticView {
             HStack {
                 Text("Meal Log")
                     .foregroundColor(.lavender)
-                    .font(.system(size: 20))
+                    .font(.custom("Oswald-SemiBold", size: 20))
                 
                 Spacer()
                 

@@ -55,6 +55,7 @@ extension SettingView {
     var bottomButton: some View {
         HStack {
             Text("Save")
+                .font(.custom("Oswald-Bold", size: 14))
                 .foregroundStyle(.lavender)
                 .font(.headline)
                 .frame(height: 55)
@@ -68,6 +69,7 @@ extension SettingView {
                 .clipShape(RoundedRectangle(cornerRadius: 15))
             
             Text("Sign Out")
+                .font(.custom("Oswald-Bold", size: 14))
                 .foregroundStyle(.lavender)
                 .font(.headline)
                 .frame(height: 55)
