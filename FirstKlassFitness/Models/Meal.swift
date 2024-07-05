@@ -16,6 +16,12 @@ class Meal: Identifiable {
     }
 }
 
+extension Meal {
+    var stringCal: String {
+        return "\(calories)"
+    }
+}
+
 var demo: [Meal] = [
     Meal(calories: 141, meal: "Rice", date: .now),
     Meal(calories: 300, meal: "Chicken", date: .now),

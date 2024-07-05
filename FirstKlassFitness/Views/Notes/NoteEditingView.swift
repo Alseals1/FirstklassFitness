@@ -9,8 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct NoteEditingView: View {
-    @Query var notes: [Notes]
-    @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     @Bindable var note: Notes
     

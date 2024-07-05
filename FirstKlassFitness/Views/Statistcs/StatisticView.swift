@@ -7,6 +7,7 @@ struct StatisticView: View {
     
     @State private var selectedDate = Date()
     @State private var mealLogShown = false
+    @State var mealToEdit: Meal?
     
     #warning("Add Meal Edit")
     var body: some View {
@@ -60,23 +61,25 @@ extension StatisticView {
             MealLogStationView(mealLogShown: $mealLogShown, selectedDate: $selectedDate)
                 .presentationDetents([.fraction(0.50), .medium])
         })
+        .sheet(item: $mealToEdit) { item in
+            MealEditView(meal: item)
+        }
     }
     
     var meal: some View {
         List {
             ForEach(mealByDate()) { item in
-                NavigationLink {
-                    Text("Edit")
-                } label: {
-                    MealLogItem(calories: item.calories, meal: item.meal, date: item.date)
-                }
-
+                MealLogItem(calories: item.calories, meal: item.meal, date: item.date)
+                    .onTapGesture {
+                        mealToEdit = item
+                    }
             }
             .onDelete(perform: deleteMeal)
         }
         .listStyle(.plain)
         .navigationBarItems(trailing: EditButton())
     }
+    
 }
 
 /// Function
@@ -99,5 +102,67 @@ extension StatisticView {
             modelContext.delete(meal)
         }
     }
+}
+
+struct MealEditView: View {
+    @Environment(\.dismiss) var dismiss
+    @Bindable var meal: Meal
+    
+    
+    var body: some View {
+        VStack(spacing: 30) {
+            VStack(alignment: .leading) {
+                Text("Meal")
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                
+                TextField(meal.meal, text: $meal.meal)
+                    .padding()
+                    .foregroundStyle(.white)
+                    .background(RoundedRectangle(cornerRadius: 10).fill(.gray.opacity(0.1)))
+                    .placeholder(when: meal.meal.isEmpty) {
+                        Text("Log Your Meal").foregroundColor(.gray)
+                            .padding(.horizontal)
+                    }
+            }
+            
+            VStack(alignment: .leading) {
+                Text("Calories")
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                
+                TextField(meal.stringCal, text: bindingString(from: $meal.calories))
+                    .padding()
+                    .foregroundStyle(.white)
+                    .background(RoundedRectangle(cornerRadius: 10)
+                        .fill(.gray.opacity(0.1)))
+                    .placeholder(when: meal.stringCal.isEmpty) {
+                        Text("Log Your Calories").foregroundColor(.gray)
+                            .padding(.horizontal)
+                    }
+            }
+            
+            Button(action: { dismiss() }, label: {
+                Text("Done")
+                    .foregroundStyle(.royalPurple)
+                    
+            })
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 10).fill(.charcoalGray))
+        }
+        .padding(.horizontal, 20)
+    }
+    private func bindingString(from intBinding: Binding<Int>) -> Binding<String> {
+         return Binding<String>(
+             get: {
+                 String(intBinding.wrappedValue)
+             },
+             set: {
+                 if let intValue = Int($0) {
+                     intBinding.wrappedValue = intValue
+                 }
+             }
+         )
+     }
 }
 
