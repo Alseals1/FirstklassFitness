@@ -87,7 +87,7 @@
     "workoutDetailImage": "squat_jumps_detail",
     "duration": 40,
     "levelofExercise": "Intermediate",
-    "workoutImage": "squat_jumps_home"
+    "workoutImage": "squatJump"
   },
   {
     "id": "32072f1a-9329-4b7f-9ba8-7ebfb80415d1",
@@ -96,7 +96,7 @@
     "workoutDetailImage": "plank_jacks_detail",
     "duration": 30,
     "levelofExercise": "Intermediate",
-    "workoutImage": "plank_jacks_home"
+    "workoutImage": "plankjack"
   },
   {
     "id": "157e98ff-44da-4e92-86a2-cd417e2a1296",
@@ -105,6 +105,6 @@
     "workoutDetailImage": "box_jumps_detail",
     "duration": 45,
     "levelofExercise": "Advanced",
-    "workoutImage": "box_jumps_home"
+    "workoutImage": "jumpbox"
   }
 ]
