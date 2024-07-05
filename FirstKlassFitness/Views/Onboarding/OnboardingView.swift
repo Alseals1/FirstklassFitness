@@ -129,7 +129,7 @@ extension OnboardingView {
                 .foregroundStyle(.white)
             
             Text("Welcome to Your FirstKlass Fitness Journey!")
-                .font(.largeTitle)
+                .font(.custom("Oswald-Bold", size: 24))
                 .fontWeight(.semibold)
                 .foregroundStyle(.white)
                 .overlay(alignment: .bottom) {
@@ -139,8 +139,8 @@ extension OnboardingView {
                         .foregroundStyle(.white)
                 }
             
-            Text("Get ready to transform your fitness with high-intensity interval training. Let's start this journey together!")
-                .fontWeight(.medium)
+            Text("Get ready to transform your fitness with high-intensity interval training. Let's start this journey together!")//Roboto-Regular.ttf
+                .font(.custom("Oswald-Regular", size: 18))
                 .foregroundStyle(.white)
             Spacer()
             
@@ -154,7 +154,7 @@ extension OnboardingView {
             Spacer()
             
             Text("What Your Name?")
-                .font(.largeTitle)
+                .font(.custom("Oswald-Bold", size: 24))
                 .fontWeight(.semibold)
                 .foregroundStyle(.white)
             OnBoardingTextField(placeholder: "Your name here...", text: $name)
@@ -170,12 +170,12 @@ extension OnboardingView {
             Spacer()
             
             Text("What Your Age?")
-                .font(.largeTitle)
+                .font(.custom("Oswald-Bold", size: 24))
                 .fontWeight(.semibold)
                 .foregroundStyle(.white)
             
             Text("\( String(format: "%.0f", age))")
-                .font(.largeTitle)
+                .font(.custom("Oswald-Bold", size: 24))
                 .fontWeight(.semibold)
                 .foregroundStyle(.lavender)
             
@@ -194,7 +194,7 @@ extension OnboardingView {
             Spacer()
             
             Text("What's your gender?")
-                .font(.largeTitle)
+                .font(.custom("Oswald-Bold", size: 24))
                 .fontWeight(.semibold)
                 .foregroundStyle(.white)
             
@@ -246,12 +246,12 @@ extension OnboardingView {
             
             if let bmi = bmi, let calorieGoal = calorieGoal {
                 Text("Your BMI: \(String(format: "%.2f", bmi))")
-                    .font(.headline)
+                    .font(.custom("Oswald-Bold", size: 20))
                     .foregroundStyle(.white)
                     .padding()
                 
                 Text("Your Daily Calorie Goal: \(Int(calorieGoal)) kcal")
-                    .font(.headline)
+                    .font(.custom("Oswald-Bold", size: 20))
                     .padding()
             }
             Spacer()

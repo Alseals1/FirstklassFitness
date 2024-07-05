@@ -21,6 +21,8 @@ struct MonthView: View {
                 Spacer()
                 
                 Text(getMonth(from: currentDate))
+                    .font(.custom("Oswald-Regular", size: 18))
+                    .foregroundStyle(.white)
                 
                 Spacer()
                 

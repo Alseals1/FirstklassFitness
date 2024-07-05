@@ -21,19 +21,28 @@ struct ProgressInformationView: View {
                     .rotationEffect(.degrees(-90))
                 
                 VStack(spacing: 5){
-                    HStack {
+                    VStack {
+                        Text("Goal")
+                            .font(.custom("Oswald-Bold", size: 10))
                         Text("\(Int(currentUserCalorieGoal ?? 0))")
-                            .font(.system(size: 36))
+                    }
+                    .font(.caption)
+                    .padding()
+                    .background(Circle().fill(Gradient(colors: [.lavender, .royalPurple])))
+                    
+                    HStack {
+                        Text("\(Int(calories))")
+                            .font(.custom("Oswald-Regular", size: 36))
                         Text("Cal")
-                            .font(.system(size: 24))
+                            .font(.custom("Oswald-Regular", size: 24))
                     }
                     Text("Active Calories")
-                        .font(.system(size: 13))
+                        .font(.custom("Oswald-Regular", size: 13))
                     
                     if Int(currentUserCalorieGoal ?? 0) < calories  {
                         Text("You are over your goal\n calories for today")
                             .foregroundColor(.red)
-                            .font(.system(size: 15, weight: .semibold))
+                            .font(.custom("Oswald-Bold", size: 14))
                             .multilineTextAlignment(.center)
                     }
                 }

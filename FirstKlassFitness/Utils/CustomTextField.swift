@@ -23,9 +23,7 @@ struct CustomTextField: View {
                 .padding(.horizontal)
                 .background(Color(.charcoalGray))
                 .clipShape(RoundedRectangle(cornerRadius: 8))
-            
         }
-        
     }
 }
 
