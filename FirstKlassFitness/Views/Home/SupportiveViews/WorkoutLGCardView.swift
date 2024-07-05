@@ -12,7 +12,8 @@ struct WorkoutLGCardView: View {
             VStack(alignment: .leading, spacing: 0) {
                 Text(exercise.name)
                     .foregroundStyle(.white)
-                    .font(.system(size: 25, weight: .bold))
+                    .font(.custom("Oswald-Bold", size: 25))
+
                 
                 HStack(spacing: 0) {
                     Text("\(exercise.duration)")
@@ -20,6 +21,7 @@ struct WorkoutLGCardView: View {
                     .fontWeight(.bold)
                     
                     Text("sec")
+                        .font(.custom("Oswald-Regular", size: 12))
                         .foregroundStyle(.white)
                 }
             }

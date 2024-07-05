@@ -8,15 +8,14 @@ struct TodayWorkoutPlanView: View {
         VStack {
             HStack {
                 Text("Check Out These Workouts")
+                    .font(.custom("Oswald-Bold", size: 14))
                     .foregroundStyle(.white)
-                    .font(.system(size: 16))
-                    .bold()
                 
                 Spacer()
                 
                 Text(Date().formattedDate())
                     .foregroundStyle(.lavender)
-                    .font(.system(size: 16))
+                    .font(.custom("Oswald-Regular", size: 15))
                 
             }
             

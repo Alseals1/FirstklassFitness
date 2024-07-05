@@ -9,8 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct NoteEditingView: View {
-    @Query var notes: [Notes]
-    @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     @Bindable var note: Notes
     
@@ -21,22 +19,19 @@ struct NoteEditingView: View {
                 .ignoresSafeArea()
             VStack(alignment: .leading, spacing: 2)  {
                     updateNotesView
+                
+                Button(action: { dismiss() }, label: {
+                    Text("Done")
+                        .foregroundStyle(.royalPurple)
+                        
+                })
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 10).fill(.charcoalGray))
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.vertical, 30)
             }
         }
         .navigationTitle("Update Notes")
-        .toolbar {
-            ToolbarItemGroup(placement: .topBarTrailing) {
-                Button(action: { dismiss() }) {
-                    Image(systemName: "checkmark")
-                        .font(.system(size: 12, weight: .bold))
-                        .foregroundColor(.white)
-                        .padding(5)
-                        .background(.lavender)
-                        .clipShape(Circle())
-                        .shadow(color: Color.gray.opacity(0.6), radius: 20, x: 0, y: 5)
-                }
-            }
-        }
     }
     
     var updateNotesView: some View {

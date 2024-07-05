@@ -12,6 +12,7 @@ struct DayView: View {
                     Text(date.getDay(from: date))
                         .lineLimit(1)
                 }
+                .font(.custom("Oswald-Bold", size: 16))
                 .foregroundColor(.white)
                 .frame(width: 40, height: 64)
             }

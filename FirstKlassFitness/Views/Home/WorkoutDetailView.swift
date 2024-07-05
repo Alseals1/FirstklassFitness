@@ -29,24 +29,25 @@ struct WorkoutDetailView: View {
                 
                 Text(exercise.name)
                     .foregroundStyle(.white)
-                    .font(.system(size: 33, weight: .bold))
+                    .font(.custom("Oswald-Bold", size: 33))
                     .lineLimit(.max)
                     .padding([.bottom, .leading], 20)
             }
             .clipShape(RoundedRectangle(cornerRadius: 25))
             
             VStack(spacing: 10) {
-                HStack {
-                    Text("TIME:")
-                        .padding(5)
-                        .background(RoundedRectangle(cornerRadius: 8).fill(.lavender))
+                HStack(spacing: 0) {
+                    Text("\(exercise.duration)")
+                        .foregroundStyle(.white)
                     
-                    Text("\(exercise.duration)sec")
+                    Text("sec")
+                        .font(.custom("Oswald-Regular", size: 12))
+                        .foregroundStyle(.white)
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 
                 Text(exercise.description)
-                    .font(.system(size: 18, weight: .medium))
+                    .font(.custom("Oswald-Regular", size: 18))
                     .multilineTextAlignment(.leading)
                 
                 Button(action: {
@@ -54,11 +55,11 @@ struct WorkoutDetailView: View {
                 }, label: {
                     VStack {
                         Text("Notes")
-                            .font(.system(size: 20))
+                            .font(.custom("Oswald-Regular", size: 20))
                             .bold()
                         
                         Image(systemName: "square.and.pencil")
-                            .font(.system(size: 30, weight: .medium))
+                           .font(.system(size: 30, weight: .medium))
                             .foregroundStyle(.lighterGray)
                     }
                     .foregroundStyle(.white)

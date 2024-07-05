@@ -8,7 +8,6 @@ struct NotesView: View {
     @State private var noteLogShown: Bool = false
     @State var noteToEdit: Notes?
     
-    
     var body: some View {
         ZStack {
             Color.black
@@ -17,7 +16,7 @@ struct NotesView: View {
                 VStack(alignment: .leading) {
                     HStack {
                         Text("NOTES")
-                            .font(.system(size: 30))
+                            .font(.custom("Oswald-Bold", size: 30))
                            
                         Spacer()
                         Button(action: {
@@ -38,9 +37,8 @@ struct NotesView: View {
                         })
                     }
                     Text("Always Take Notes Of Your Failure and Progess")
-                        .font(.system(size: 15))
+                        .font(.custom("Oswald-Regular", size: 14))
                         .foregroundStyle(Color.secondary)
-                        
                     
                     Rectangle()
                         .fill(Color.lavender)
@@ -56,8 +54,6 @@ struct NotesView: View {
         .sheet(item: $noteToEdit) { note in
             NoteEditingView(note: note)
         }
-           
-           
     }
     
     var notesList: some View {
@@ -66,9 +62,11 @@ struct NotesView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 5) {
                         Text(note.title)
-                            .font(.system(size: 18, weight: .bold))
+                            .font(.custom("Oswald-Bold", size: 18))
+                            .foregroundStyle(.white)
                         Text(note.abstract)
-                            .font(.system(size: 18))
+                            .font(.custom("Oswald-Regular", size: 16))
+                            .foregroundStyle(.charcoalGray)
                             .offset(x: 10)
                 }
                     Spacer()

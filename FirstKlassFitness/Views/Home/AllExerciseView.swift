@@ -10,6 +10,7 @@ struct AllExerciseView: View {
                     WorkoutDetailView(exercise: exercise)
                 } label: {
                     Text(exercise.name)
+                        .font(.custom("Oswald-Regular", size: 18))
                         .foregroundStyle(.white)
                 }
 

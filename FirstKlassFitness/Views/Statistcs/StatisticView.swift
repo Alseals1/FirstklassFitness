@@ -7,6 +7,7 @@ struct StatisticView: View {
     
     @State private var selectedDate = Date()
     @State private var mealLogShown = false
+    @State var mealToEdit: Meal?
     
     #warning("Add Meal Edit")
     var body: some View {
@@ -60,23 +61,25 @@ extension StatisticView {
             MealLogStationView(mealLogShown: $mealLogShown, selectedDate: $selectedDate)
                 .presentationDetents([.fraction(0.50), .medium])
         })
+        .sheet(item: $mealToEdit) { item in
+            MealEditView(meal: item)
+        }
     }
     
     var meal: some View {
         List {
             ForEach(mealByDate()) { item in
-                NavigationLink {
-                    Text("Edit")
-                } label: {
-                    MealLogItem(calories: item.calories, meal: item.meal, date: item.date)
-                }
-
+                MealLogItem(calories: item.calories, meal: item.meal, date: item.date)
+                    .onTapGesture {
+                        mealToEdit = item
+                    }
             }
             .onDelete(perform: deleteMeal)
         }
         .listStyle(.plain)
         .navigationBarItems(trailing: EditButton())
     }
+    
 }
 
 /// Function
@@ -100,4 +103,3 @@ extension StatisticView {
         }
     }
 }
-

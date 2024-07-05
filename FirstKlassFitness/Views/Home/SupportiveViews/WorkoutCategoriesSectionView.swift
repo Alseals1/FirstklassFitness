@@ -9,8 +9,9 @@ struct WorkoutCategoriesSectionView: View {
         VStack {
             HStack {
                 Text("Workout Categories")
+                    .font(.custom("Oswald-bold", size: 14))
                     .foregroundStyle(.white)
-                    .bold()
+                    
                 
                 Spacer()
 
@@ -18,6 +19,8 @@ struct WorkoutCategoriesSectionView: View {
                     AllExerciseView(exercises: exercises)
                 } label: {
                     Text("See All")
+                        .font(.custom("Oswald-Bold", size: 14))
+
                         .foregroundStyle(.lavender)
                 }
             }

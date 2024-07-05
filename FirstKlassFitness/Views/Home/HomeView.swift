@@ -8,7 +8,7 @@ struct HomeView: View {
             VStack(spacing: 20) {
                 HStack {
                     Text("Hello \(currentUserName ?? "No Name"),")
-                        .font(.system(size: 36))
+                        .font(.custom("Oswald-Bold", size: 34))
                         .foregroundStyle(Color.white)
                     Spacer()
                 }
